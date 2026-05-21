@@ -42,12 +42,12 @@
     <div class="stars" id="stars"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <p class="hero-eyebrow">Advancing the Future of Space</p>
-      <h1>Engineering Humanity's<br /><span class="highlight">Multi-Planetary Future</span></h1>
-      <p class="hero-sub">Space Exploration Technologies Co. designs, manufactures, and launches the world's most advanced rockets and spacecraft — delivering payloads to orbit and beyond.</p>
+      <p class="hero-eyebrow">SpaceX &nbsp;&middot;&nbsp; SpaceXAI &nbsp;&middot;&nbsp; X &nbsp;&middot;&nbsp; Starlink &nbsp;&middot;&nbsp; Neuralink</p>
+      <h1>The Company That<br /><span class="highlight">Changed Everything</span></h1>
+      <p class="hero-sub">$1.75 trillion valuation. 400+ Falcon 9 flights. Starship in active testing. Grok-4 deployed on 220,000-GPU Colossus. $75B IPO pending on NASDAQ: SPCX. The largest merger in corporate history &mdash; and we&rsquo;re just getting started.</p>
       <div class="hero-actions">
-        <a href="#missions" class="btn btn-primary">View Active Missions</a>
-        <a href="#about" class="btn btn-ghost">About the Company</a>
+        <a href="#missions" class="btn btn-primary">Explore the Fleet</a>
+        <a href="#launches" class="btn btn-ghost">Next Launch &darr;</a>
       </div>
     </div>
     <div class="hero-scroll"><span></span></div>
@@ -55,10 +55,10 @@
 
   <!-- Stats Bar -->
   <div class="stats-bar">
-    <div class="stat"><span class="stat-num" data-target="247">0</span><span class="stat-label">Total Launches</span></div>
-    <div class="stat"><span class="stat-num" data-target="198">0</span><span class="stat-label">Successful Missions</span></div>
-    <div class="stat"><span class="stat-num" data-target="14">0</span><span class="stat-label">Active Satellites</span></div>
-    <div class="stat"><span class="stat-num" data-target="31">0</span><span class="stat-label">Government Contracts</span></div>
+    <div class="stat"><span class="stat-num" data-target="400">0</span><span class="stat-label">Falcon 9 Flights</span></div>
+    <div class="stat"><span class="stat-num" data-target="7200">0</span><span class="stat-label">Starlink Satellites Active</span></div>
+    <div class="stat"><span class="stat-num" data-target="220">0</span><span class="stat-label">Colossus GPUs (Thousands)</span></div>
+    <div class="stat"><span class="stat-num" data-target="18">0</span><span class="stat-label">2025 Revenue (USD Billions)</span></div>
   </div>
 
   <!-- About -->
@@ -90,39 +90,105 @@
   <!-- Missions -->
   <section class="section dark" id="missions">
     <div class="section-inner">
-      <div class="section-label">Operations</div>
-      <h2>Active Mission Portfolio</h2>
-      <p class="section-sub">Current status across our fleet of orbital and deep-space programs.</p>
-      <div class="missions-grid">
-        <div class="mission-card">
-          <div class="mission-header">
-            <span class="status active">ACTIVE</span>
-            <span class="mission-id">SXT-047</span>
-          </div>
-          <h3>Project Helios</h3>
-          <p>Solar observation satellite in low Earth orbit, collecting solar wind data and magnetospheric measurements for NASA's Heliophysics Division.</p>
-          <div class="progress-bar"><div class="progress" style="width: 72%"></div></div>
-          <div class="mission-footer"><small>Mission Progress: 72%</small><small>Launch: Mar 2024</small></div>
+      <div class="section-label">Launch Vehicles</div>
+      <h2>The Fleet That Rewrote<br />the Rules of Space</h2>
+      <p class="section-sub">Four rockets. More payload to orbit at lower cost per kilogram than any vehicles in history. Every first stage recovered and reflown.</p>
+
+      <!-- Starship Hero -->
+      <div class="rocket-hero">
+        <div class="rocket-hero-img">
+          <img src="https://images.unsplash.com/photo-1569144157591-c60f3f82f137?w=1400&q=80&auto=format&fit=crop" alt="Starship launch" loading="lazy" />
+          <div class="rocket-hero-badge"><span class="rstatus rstatus-testing">FLIGHT TESTING</span></div>
         </div>
-        <div class="mission-card">
-          <div class="mission-header">
-            <span class="status active">ACTIVE</span>
-            <span class="mission-id">SXT-051</span>
+        <div class="rocket-hero-content">
+          <div class="rocket-num">01</div>
+          <h3>Starship</h3>
+          <p class="rocket-tagline">The most powerful rocket ever built &mdash; by a factor of two.</p>
+          <p>122 meters tall. 33 Raptor engines burning liquid methane and liquid oxygen. More than 150 tonnes to low Earth orbit fully reusable &mdash; 250 tonnes in expendable configuration. SpaceX has invested $15B+ developing the vehicle that will take crews to Mars, supply NASA&rsquo;s Artemis lunar base, and eventually carry 100+ passengers on point-to-point Earth routes. Integrated Flight Test 9 flew May 2026. IFT-10 targeting June 2026.</p>
+          <div class="spec-table" style="margin-top:1.25rem;">
+            <div class="spec-row"><span>Height (full stack)</span><span>122 m</span></div>
+            <div class="spec-row"><span>Liftoff thrust</span><span>74.4 MN &nbsp;&middot;&nbsp; 33 &times; Raptor 3</span></div>
+            <div class="spec-row"><span>Payload to LEO</span><span>&gt;150 t reusable &nbsp;/&nbsp; 250 t expendable</span></div>
+            <div class="spec-row"><span>Propellant</span><span>LOX / Liquid Methane (Methalox)</span></div>
+            <div class="spec-row"><span>Development investment</span><span>$15B+ (ongoing through 2026)</span></div>
+            <div class="spec-row"><span>Current status</span><span>IFT-9 complete &nbsp;&middot;&nbsp; IFT-10 targeting June 2026</span></div>
           </div>
-          <h3>Artemis Relay</h3>
-          <p>Deep-space communication relay satellite positioned at the Earth-Moon L2 Lagrange point, supporting lunar surface operations.</p>
-          <div class="progress-bar"><div class="progress" style="width: 45%"></div></div>
-          <div class="mission-footer"><small>Mission Progress: 45%</small><small>Launch: Nov 2024</small></div>
         </div>
-        <div class="mission-card">
-          <div class="mission-header">
-            <span class="status planned">PLANNED</span>
-            <span class="mission-id">SXT-058</span>
+      </div>
+
+      <!-- Rockets Grid -->
+      <div class="rocket-grid">
+        <div class="rocket-card">
+          <div class="rocket-card-img">
+            <img src="https://images.unsplash.com/photo-1517976487492-5750f3195933?w=700&q=80&auto=format&fit=crop" alt="Falcon 9 on launch pad" loading="lazy" />
+            <span class="rstatus rstatus-active">OPERATIONAL</span>
           </div>
-          <h3>Mars Pathfinder II</h3>
-          <p>Next-generation rover mission targeting the Jezero Crater region of Mars, building on data collected by the original Pathfinder program.</p>
-          <div class="progress-bar"><div class="progress" style="width: 18%"></div></div>
-          <div class="mission-footer"><small>Mission Progress: 18%</small><small>Target: Q3 2026</small></div>
+          <div class="rocket-card-body">
+            <div class="rocket-num small">02</div>
+            <h3>Falcon 9</h3>
+            <p class="rocket-tagline">Earth&rsquo;s most reliable orbital rocket.</p>
+            <p>400+ consecutive successful flights. First-stage boosters recovered and relaunched up to 23 times each. First rocket ever to land an orbital-class booster. The vehicle that ended American dependence on Russian Soyuz for crewed spaceflight.</p>
+            <div class="rocket-mini-specs">
+              <div><strong>22,800 kg</strong><span>to LEO</span></div>
+              <div><strong>9 &times; Merlin</strong><span>1D engines</span></div>
+              <div><strong>70 m</strong><span>tall</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="rocket-card">
+          <div class="rocket-card-img">
+            <img src="https://images.unsplash.com/photo-1446776858070-17aad4fb3d53?w=700&q=80&auto=format&fit=crop" alt="Falcon Heavy launch" loading="lazy" />
+            <span class="rstatus rstatus-active">OPERATIONAL</span>
+          </div>
+          <div class="rocket-card-body">
+            <div class="rocket-num small">03</div>
+            <h3>Falcon Heavy</h3>
+            <p class="rocket-tagline">The world&rsquo;s most powerful operational rocket.</p>
+            <p>Three Falcon 9 first stages strapped together. 27 Merlin engines. All three cores recovered and reused. Capable of delivering payloads to geostationary transfer orbit, the Moon, Mars, and beyond. Used by the U.S. Space Force, NASA, and commercial operators.</p>
+            <div class="rocket-mini-specs">
+              <div><strong>63,800 kg</strong><span>to LEO</span></div>
+              <div><strong>27 &times; Merlin</strong><span>engines</span></div>
+              <div><strong>3 cores</strong><span>recovered</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="rocket-card">
+          <div class="rocket-card-img">
+            <img src="https://images.unsplash.com/photo-1541873676-a18131494184?w=700&q=80&auto=format&fit=crop" alt="Dragon capsule in orbit" loading="lazy" />
+            <span class="rstatus rstatus-active">CREW &amp; CARGO</span>
+          </div>
+          <div class="rocket-card-body">
+            <div class="rocket-num small">04</div>
+            <h3>Dragon</h3>
+            <p class="rocket-tagline">America&rsquo;s human spaceflight vehicle.</p>
+            <p>Crew Dragon carries up to 7 astronauts to the International Space Station. The first commercially-built crewed spacecraft in history. Cargo Dragon resupplies ISS with 6,000 kg of pressurized cargo. SpaceX has now completed 10+ crewed missions &mdash; more than any other operator.</p>
+            <div class="rocket-mini-specs">
+              <div><strong>7</strong><span>crew seats</span></div>
+              <div><strong>6,000 kg</strong><span>cargo capacity</span></div>
+              <div><strong>10+</strong><span>crewed missions</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Starlink Banner -->
+      <div class="starlink-banner">
+        <div class="starlink-img-wrap">
+          <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=900&q=80&auto=format&fit=crop" alt="Starlink constellation from orbit" loading="lazy" />
+        </div>
+        <div class="starlink-content">
+          <div class="section-label">Satellite Internet</div>
+          <h3>Starlink</h3>
+          <p class="rocket-tagline">The world&rsquo;s largest satellite constellation by count.</p>
+          <p>7,200+ operational satellites in low Earth orbit, providing high-speed broadband internet to 5 million+ subscribers across 100+ countries. $11.4 billion in revenue in 2025. The commercial engine funding everything else SpaceX builds.</p>
+          <div class="starlink-stats">
+            <div class="sl-stat"><strong>7,200+</strong><span>Operational Satellites</span></div>
+            <div class="sl-stat"><strong>5M+</strong><span>Active Subscribers</span></div>
+            <div class="sl-stat"><strong>$11.4B</strong><span>2025 Revenue</span></div>
+            <div class="sl-stat"><strong>100+</strong><span>Countries Served</span></div>
+          </div>
         </div>
       </div>
     </div>
@@ -131,38 +197,160 @@
   <!-- Technology -->
   <section class="section" id="technology">
     <div class="section-inner">
-      <div class="section-label">Engineering</div>
-      <h2>Proprietary Technology Stack</h2>
-      <p class="section-sub">Every component engineered in-house to meet the demands of deep-space exploration.</p>
-      <div class="tech-list">
-        <div class="tech-item">
-          <div class="tech-num">01</div>
-          <div>
-            <h3>Ion Propulsion System</h3>
-            <p>High-efficiency Hall-effect thruster arrays providing sustained acceleration for deep-space missions, achieving Isp values exceeding 3,000 seconds.</p>
+      <div class="section-label">SpaceXAI Division</div>
+      <h2>The AI Empire Inside<br />the Space Empire</h2>
+      <p class="section-sub">In February 2026, SpaceX acquired xAI in an all-stock transaction valuing the combined entity at $1.25 trillion &mdash; the largest merger in corporate history. Grok, X, Colossus, and Cursor now operate under a single roof.</p>
+
+      <div class="ai-grid">
+
+        <div class="ai-card ai-card-featured">
+          <div class="ai-card-img">
+            <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=900&q=80&auto=format&fit=crop" alt="Grok AI neural network" loading="lazy" />
+            <span class="ai-badge">SpaceXAI</span>
+          </div>
+          <div class="ai-card-body">
+            <h3>Grok-4 &amp; Grok Heavy</h3>
+            <p class="ai-sub">World&rsquo;s most capable frontier AI model.</p>
+            <p>Released July 2025. Grok-4 leads every major benchmark for mathematical reasoning, coding, and scientific analysis. Grok Heavy &mdash; the maximum-performance tier at $300/month &mdash; is used by researchers, engineers, and governments worldwide. Fully integrated with X and available via API. Now training next-generation models on Colossus 2 using Cursor&rsquo;s open-source Kimi K2.5 checkpoint.</p>
+            <div class="ai-stats">
+              <div><strong>Grok-4</strong><span>Released July 2025</span></div>
+              <div><strong>$300/mo</strong><span>Grok Heavy tier</span></div>
+              <div><strong>#1</strong><span>Major benchmarks</span></div>
+            </div>
           </div>
         </div>
-        <div class="tech-item">
-          <div class="tech-num">02</div>
-          <div>
-            <h3>Cryogenic Fuel Management</h3>
-            <p>Advanced liquid hydrogen/oxygen storage and transfer systems with zero-boiloff capability for missions exceeding 18 months duration.</p>
+
+        <div class="ai-card">
+          <div class="ai-card-img">
+            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=700&q=80&auto=format&fit=crop" alt="Colossus data center Memphis" loading="lazy" />
+            <span class="ai-badge ai-badge-gold">WORLD RECORD</span>
+          </div>
+          <div class="ai-card-body">
+            <h3>Colossus 1 &amp; 2</h3>
+            <p class="ai-sub">The most powerful AI supercomputer cluster on Earth.</p>
+            <p>Built in Memphis, TN in record time. Colossus 1 houses 220,000+ NVIDIA GPUs including H100, H200, and GB200 NVL72 accelerators. Colossus 2 spans a second site in Mississippi. Combined compute: over 1 gigawatt. Anthropic has contracted $1.25 billion per month ($15B/year) for access through May 2029 to power Claude Pro and Claude Max. SpaceX plans to expand to 1 million GPUs.</p>
+            <div class="ai-stats">
+              <div><strong>220,000+</strong><span>NVIDIA GPUs</span></div>
+              <div><strong>$15B/yr</strong><span>Anthropic contract</span></div>
+              <div><strong>1 GW</strong><span>Combined compute</span></div>
+            </div>
           </div>
         </div>
-        <div class="tech-item">
-          <div class="tech-num">03</div>
-          <div>
-            <h3>Autonomous GNC</h3>
-            <p>AI-driven guidance, navigation, and control systems executing real-time path correction and obstacle avoidance without Earth-based input.</p>
+
+        <div class="ai-card">
+          <div class="ai-card-img">
+            <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=700&q=80&auto=format&fit=crop" alt="Cursor AI coding" loading="lazy" />
+            <span class="ai-badge ai-badge-pending">$60B PENDING</span>
+          </div>
+          <div class="ai-card-body">
+            <h3>Cursor (Anysphere)</h3>
+            <p class="ai-sub">The AI coding tool used by 67% of the Fortune 500.</p>
+            <p>On April 21, 2026, SpaceX secured an option to acquire Cursor for $60 billion &mdash; or pay $10 billion for a partnership &mdash; with a $10 billion breakup fee. Cursor has 1M+ paying customers, $1B annualized revenue, and is the fastest-growing software startup in history. The deal is expected to close ~30 days after the SpaceX IPO. Cursor plans to train its next model from scratch on Colossus 2. Two Cursor engineering leads, Andrew Milich and Jason Ginsberg, have already joined SpaceX.</p>
+            <div class="ai-stats">
+              <div><strong>$60B</strong><span>Acquisition option</span></div>
+              <div><strong>1M+</strong><span>Paying customers</span></div>
+              <div><strong>$1B/yr</strong><span>Annualized revenue</span></div>
+            </div>
           </div>
         </div>
-        <div class="tech-item">
-          <div class="tech-num">04</div>
-          <div>
-            <h3>Multi-Layer Radiation Shielding</h3>
-            <p>Proprietary composite shielding architecture reducing crew radiation exposure to below NCRP-132 limits for 36-month deep-space transit.</p>
+
+        <div class="ai-card">
+          <div class="ai-card-img">
+            <img src="https://images.unsplash.com/photo-1611605698335-8441978b4c2e?w=700&q=80&auto=format&fit=crop" alt="X platform social network" loading="lazy" />
+            <span class="ai-badge">X CORP</span>
+          </div>
+          <div class="ai-card-body">
+            <h3>X Platform</h3>
+            <p class="ai-sub">The digital public square &mdash; now fully integrated with Grok.</p>
+            <p>xAI acquired X Corp. on March 28, 2025 in an all-stock transaction valuing X at $33 billion ($45B including debt). The combined entity, X.AI Holdings Corp., was then folded into SpaceX in the February 2026 merger. X now serves as the primary distribution surface for Grok, with Grok Build, Grokipedia, and real-time search deeply integrated into the platform used by hundreds of millions of users daily.</p>
+            <div class="ai-stats">
+              <div><strong>$45B</strong><span>Acquisition value</span></div>
+              <div><strong>Grok-native</strong><span>AI integration</span></div>
+              <div><strong>Grokipedia</strong><span>Launched Oct 2025</span></div>
+            </div>
           </div>
         </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Launch Schedule -->
+  <section class="section dark" id="launches">
+    <div class="section-inner">
+      <div class="section-label">Mission Control</div>
+      <h2>Upcoming Launch Schedule</h2>
+      <p class="section-sub">Live countdowns to next launches from Starbase TX, Cape Canaveral FL, and Vandenberg SFB CA. All times UTC.</p>
+      <div class="launch-grid">
+
+        <div class="launch-card launch-featured">
+          <div class="launch-vehicle-bar"><span class="lv-name">Starship IFT-10</span><span class="lv-pad">Starbase, TX &mdash; LC-A</span></div>
+          <div class="countdown" data-target="2026-06-19T21:00:00Z">
+            <div class="cd-block"><span class="cd-days">--</span><small>DAYS</small></div>
+            <div class="cd-sep">:</div>
+            <div class="cd-block"><span class="cd-hours">--</span><small>HRS</small></div>
+            <div class="cd-sep">:</div>
+            <div class="cd-block"><span class="cd-min">--</span><small>MIN</small></div>
+            <div class="cd-sep">:</div>
+            <div class="cd-block"><span class="cd-sec">--</span><small>SEC</small></div>
+          </div>
+          <div class="launch-detail">
+            <p>Integrated Flight Test 10. Full-stack Starship + Super Heavy. Objectives: second consecutive catch of Super Heavy booster by Mechazilla chopstick arms, controlled splashdown of Ship in Indian Ocean. Payload capacity demonstration for NASA Artemis HLS crewed lunar landing profile.</p>
+            <div class="launch-tags"><span>Starship</span><span>IFT-10</span><span>Starbase</span><span>Booster Catch</span></div>
+          </div>
+        </div>
+
+        <div class="launch-card">
+          <div class="launch-vehicle-bar"><span class="lv-name">Falcon 9 &mdash; Starlink 16-1</span><span class="lv-pad">SLC-40, Cape Canaveral, FL</span></div>
+          <div class="countdown" data-target="2026-06-07T03:47:00Z">
+            <div class="cd-block"><span class="cd-days">--</span><small>DAYS</small></div>
+            <div class="cd-sep">:</div>
+            <div class="cd-block"><span class="cd-hours">--</span><small>HRS</small></div>
+            <div class="cd-sep">:</div>
+            <div class="cd-block"><span class="cd-min">--</span><small>MIN</small></div>
+            <div class="cd-sep">:</div>
+            <div class="cd-block"><span class="cd-sec">--</span><small>SEC</small></div>
+          </div>
+          <div class="launch-detail">
+            <p>23 Starlink V3 satellites to 530 km Shell 1 orbit. Booster B1087 on its 14th flight. Drone ship recovery &ldquo;A Shortfall of Gravitas&rdquo; deployed ~650 km downrange.</p>
+            <div class="launch-tags"><span>Falcon 9</span><span>Starlink</span><span>ASOG</span></div>
+          </div>
+        </div>
+
+        <div class="launch-card">
+          <div class="launch-vehicle-bar"><span class="lv-name">Falcon 9 &mdash; Crew-11</span><span class="lv-pad">LC-39A, Kennedy Space Center, FL</span></div>
+          <div class="countdown" data-target="2026-07-03T14:12:00Z">
+            <div class="cd-block"><span class="cd-days">--</span><small>DAYS</small></div>
+            <div class="cd-sep">:</div>
+            <div class="cd-block"><span class="cd-hours">--</span><small>HRS</small></div>
+            <div class="cd-sep">:</div>
+            <div class="cd-block"><span class="cd-min">--</span><small>MIN</small></div>
+            <div class="cd-sep">:</div>
+            <div class="cd-block"><span class="cd-sec">--</span><small>SEC</small></div>
+          </div>
+          <div class="launch-detail">
+            <p>Commercial Crew Program Mission 11 to the International Space Station. 4-person crew, ~6-month ISS rotation. Dragon C211 on its 4th flight. NASA Commercial Crew Program.</p>
+            <div class="launch-tags"><span>Falcon 9</span><span>Crew Dragon</span><span>NASA</span><span>ISS</span></div>
+          </div>
+        </div>
+
+        <div class="launch-card">
+          <div class="launch-vehicle-bar"><span class="lv-name">Falcon Heavy &mdash; USSF-67</span><span class="lv-pad">LC-39A, Kennedy Space Center, FL</span></div>
+          <div class="countdown" data-target="2026-07-21T19:30:00Z">
+            <div class="cd-block"><span class="cd-days">--</span><small>DAYS</small></div>
+            <div class="cd-sep">:</div>
+            <div class="cd-block"><span class="cd-hours">--</span><small>HRS</small></div>
+            <div class="cd-sep">:</div>
+            <div class="cd-block"><span class="cd-min">--</span><small>MIN</small></div>
+            <div class="cd-sep">:</div>
+            <div class="cd-block"><span class="cd-sec">--</span><small>SEC</small></div>
+          </div>
+          <div class="launch-detail">
+            <p>U.S. Space Force USSF-67 mission. Falcon Heavy in fully-expendable configuration delivering classified national security payload to geosynchronous orbit. Expended center core.</p>
+            <div class="launch-tags"><span>Falcon Heavy</span><span>USSF</span><span>GEO</span><span>National Security</span></div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -369,29 +557,41 @@
   <section class="section" id="press">
     <div class="section-inner">
       <div class="section-label">Newsroom</div>
-      <h2>Latest Press Releases</h2>
+      <h2>Breaking Developments</h2>
       <div class="press-list">
-        <a href="#" class="press-item">
-          <span class="press-date">May 14, 2025</span>
+        <a href="https://www.wired.com/story/spacex-ipo-anthropic-compute-finances-risks/" target="_blank" rel="noopener" class="press-item">
+          <span class="press-date">May 20, 2026</span>
           <div>
-            <h3>SETC Awarded $840M NASA Contract for Lunar Gateway Resupply Missions</h3>
-            <p>The contract covers six resupply missions to the Lunar Gateway station between 2027 and 2032.</p>
+            <h3>Anthropic Paying SpaceX $15 Billion Per Year for Colossus Compute Access</h3>
+            <p>SpaceX S-1 IPO filing reveals Anthropic has contracted $1.25B/month through May 2029 for GPU access at Colossus 1 &amp; 2 in Memphis &mdash; powering Claude Pro and Claude Max at unprecedented scale. SpaceX CEO says additional similar contracts are in discussions.</p>
+            <div class="press-tags"><span>IPO</span><span>Anthropic</span><span>Colossus</span><span>WIRED</span></div>
           </div>
           <span class="press-arrow">&#8594;</span>
         </a>
-        <a href="#" class="press-item">
-          <span class="press-date">Apr 02, 2025</span>
+        <a href="https://www.theguardian.com/technology/2026/apr/21/spacex-cursor-ai-startup" target="_blank" rel="noopener" class="press-item">
+          <span class="press-date">Apr 21, 2026</span>
           <div>
-            <h3>Successful Static Fire Test of Next-Generation Meridian Engine Completed</h3>
-            <p>The Meridian-9 engine achieved full thrust of 1.9 MN during a 120-second test at our Stennis facility.</p>
+            <h3>SpaceX Secures $60B Option to Acquire AI Coding Startup Cursor</h3>
+            <p>SpaceX announced it has secured the right to acquire Anysphere (Cursor) for $60 billion, or pay $10 billion for a strategic partnership &mdash; backed by a $10B breakup fee. &ldquo;The combination of Cursor&rsquo;s leading product with SpaceX&rsquo;s million H100-equivalent Colossus will allow us to build the world&rsquo;s most useful models,&rdquo; SpaceX said.</p>
+            <div class="press-tags"><span>Cursor</span><span>$60B</span><span>Acquisition</span><span>The Guardian</span></div>
           </div>
           <span class="press-arrow">&#8594;</span>
         </a>
-        <a href="#" class="press-item">
-          <span class="press-date">Feb 19, 2025</span>
+        <a href="https://en.wikipedia.org/wiki/SpaceXAI" target="_blank" rel="noopener" class="press-item">
+          <span class="press-date">Feb 2, 2026</span>
           <div>
-            <h3>Project Helios Satellite Exceeds Primary Mission Objectives at 18 Months</h3>
-            <p>Solar wind data collected has provided new insights into coronal mass ejection prediction models.</p>
+            <h3>SpaceX Acquires xAI in $1.25 Trillion All-Stock Deal &mdash; Largest Merger in History</h3>
+            <p>SpaceX completed its acquisition of xAI in an all-stock transaction valuing SpaceX at $1 trillion and xAI at $250 billion. Grok, X Platform, and Colossus supercomputers are now fully consolidated under SpaceX. The new SpaceXAI division is led by Michael Nicolls, former VP of Starlink.</p>
+            <div class="press-tags"><span>xAI Merger</span><span>$1.25T</span><span>SpaceXAI</span><span>Wikipedia</span></div>
+          </div>
+          <span class="press-arrow">&#8594;</span>
+        </a>
+        <a href="https://x.ai/news/anthropic-compute-partnership" target="_blank" rel="noopener" class="press-item">
+          <span class="press-date">May 2026</span>
+          <div>
+            <h3>SpaceXAI &amp; Anthropic Sign Orbital Compute Partnership Agreement</h3>
+            <p>Beyond terrestrial compute, Anthropic has expressed interest in partnering to develop multiple gigawatts of orbital AI compute capacity. SpaceX is the only organization with the launch cadence and constellation operations experience to make orbital compute a near-term engineering program rather than a research concept.</p>
+            <div class="press-tags"><span>Orbital Compute</span><span>Anthropic</span><span>Partnership</span><span>x.ai</span></div>
           </div>
           <span class="press-arrow">&#8594;</span>
         </a>

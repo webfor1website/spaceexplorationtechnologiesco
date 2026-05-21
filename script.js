@@ -61,11 +61,39 @@ const fadeObserver = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.1 });
 
-document.querySelectorAll('.card, .mission-card, .tech-item, .team-card, .press-item').forEach((el, i) => {
+document.querySelectorAll('.card, .mission-card, .tech-item, .team-card, .press-item, .rocket-card, .ai-card, .launch-card').forEach((el, i) => {
   el.classList.add('fade-in');
   el.style.transitionDelay = `${(i % 4) * 0.07}s`;
   fadeObserver.observe(el);
 });
+
+// ===== Launch Countdown Timers =====
+function updateCountdowns() {
+  document.querySelectorAll('.countdown[data-target]').forEach(el => {
+    const target = new Date(el.dataset.target).getTime();
+    const now = Date.now();
+    const diff = target - now;
+    if (diff <= 0) {
+      el.innerHTML = '<span class="cd-launched">&#x2713; LAUNCHED</span>';
+      return;
+    }
+    const days  = Math.floor(diff / 864e5);
+    const hours = Math.floor((diff % 864e5) / 36e5);
+    const mins  = Math.floor((diff % 36e5) / 6e4);
+    const secs  = Math.floor((diff % 6e4) / 1e3);
+    const fmt = n => String(n).padStart(2, '0');
+    const dEl = el.querySelector('.cd-days');
+    const hEl = el.querySelector('.cd-hours');
+    const mEl = el.querySelector('.cd-min');
+    const sEl = el.querySelector('.cd-sec');
+    if (dEl) dEl.textContent = fmt(days);
+    if (hEl) hEl.textContent = fmt(hours);
+    if (mEl) mEl.textContent = fmt(mins);
+    if (sEl) sEl.textContent = fmt(secs);
+  });
+}
+setInterval(updateCountdowns, 1000);
+updateCountdowns();
 
 // ===== Contact form =====
 document.getElementById('contactForm').addEventListener('submit', function (e) {
