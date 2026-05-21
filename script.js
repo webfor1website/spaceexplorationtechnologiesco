@@ -22,15 +22,16 @@
 // ===== Stats counter =====
 function animateCounter(el) {
   const target = parseInt(el.dataset.target, 10);
+  const suffix = el.dataset.suffix || '';
   const duration = 1800;
   const start = performance.now();
   function update(now) {
     const elapsed = now - start;
     const progress = Math.min(elapsed / duration, 1);
     const ease = 1 - Math.pow(1 - progress, 3);
-    el.textContent = Math.floor(ease * target);
+    const value = Math.floor(ease * target);
+    el.textContent = value + (progress < 1 ? '' : suffix);
     if (progress < 1) requestAnimationFrame(update);
-    else el.textContent = target;
   }
   requestAnimationFrame(update);
 }
