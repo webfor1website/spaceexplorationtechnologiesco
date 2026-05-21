@@ -31,6 +31,7 @@
       <li><a href="#about">Company</a></li>
       <li><a href="#missions">Missions</a></li>
       <li><a href="#technology">Technology</a></li>
+      <li><a href="#compute">Programs</a></li>
       <li><a href="#leadership">Leadership</a></li>
       <li><a href="#contact" class="nav-cta">Contact</a></li>
     </ul>
@@ -166,6 +167,169 @@
     </div>
   </section>
 
+  <!-- Image Break -->
+  <div class="img-divider">
+    <img src="https://images.unsplash.com/photo-1517976487492-5750f3195933?w=1600&q=80&auto=format&fit=crop" alt="Rocket on launch pad" loading="lazy" />
+    <div class="img-divider-overlay">
+      <p>Deep-Space Compute Architecture Program &nbsp;&middot;&nbsp; Technical Memorandum Series &nbsp;&middot;&nbsp; April 2026</p>
+    </div>
+  </div>
+
+  <!-- Compute Architecture -->
+  <section class="section" id="compute">
+    <div class="section-inner">
+      <div class="section-label">Deep-Space Compute Program</div>
+      <h2>HERALD &amp; AXIOM<br />Architecture Overview</h2>
+      <p class="section-sub">A five-paper technical program addressing semiconductor reliability, constitutional AI governance, and self-replication systems for century-scale autonomous deep-space operation.</p>
+
+      <div class="arch-grid">
+        <div class="arch-card">
+          <div class="arch-tag">Paper III</div>
+          <h3>HERALD</h3>
+          <p class="arch-desc">High-efficiency rad-hardened attitude localisation &amp; decision compute co-design &mdash; integrating orbital attitude control directly with the ML scheduling layer to eliminate Earth round-trip latency dependencies.</p>
+          <div class="spec-table">
+            <div class="spec-row"><span>Architecture</span><span>Attitude-Compute Co-Design</span></div>
+            <div class="spec-row"><span>Operating range</span><span>&minus;196&deg;C to +120&deg;C</span></div>
+            <div class="spec-row"><span>Rad tolerance</span><span>&ge; 300 krad TID</span></div>
+            <div class="spec-row"><span>Interconnect</span><span>CNT critical-path bundle</span></div>
+            <div class="spec-row"><span>MTTF target</span><span>&gt; 10&#8312; hr (100-year mission)</span></div>
+            <div class="spec-row"><span>Power envelope</span><span>&lt; 4 W operational burst</span></div>
+          </div>
+        </div>
+        <div class="arch-card">
+          <div class="arch-tag">Paper IV</div>
+          <h3>AXIOM</h3>
+          <p class="arch-desc">A three-layer constitutional AI governance system providing formally-verified autonomous decision-making across century-scale mission durations &mdash; with TIO protection physically enforced in read-only silicon unreachable by the reasoning layer.</p>
+          <div class="spec-table">
+            <div class="spec-row"><span>Layer 1 (ROM)</span><span>H<sub>min</sub> = 6.6 bits &nbsp;&middot;&nbsp; N<sub>thr</sub> = 30</span></div>
+            <div class="spec-row"><span>Layer 2</span><span>TMR entropy-floor projection (formally verified)</span></div>
+            <div class="spec-row"><span>Layer 3</span><span>LLM-class adaptive Bayesian reasoning</span></div>
+            <div class="spec-row"><span>Formal spec</span><span>TLA+ temporal logic (Safety + Liveness)</span></div>
+            <div class="spec-row"><span>Redundancy</span><span>Triple-modular &middot; Merkle-hash verified</span></div>
+            <div class="spec-row"><span>TIO protection</span><span>Strict guarantee &mdash; all event classes</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cnt-block">
+        <div class="cnt-image-wrap">
+          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=700&q=80&auto=format&fit=crop" alt="Semiconductor interconnect architecture" loading="lazy" />
+          <p class="cnt-caption">Critical-path interconnect layer &mdash; CNT bundle replacement for copper in deep-space compute hardware</p>
+        </div>
+        <div class="cnt-body">
+          <div class="section-label">Paper II &nbsp;&middot;&nbsp; Interconnect Reliability</div>
+          <h3>Carbon Nanotube Interconnects &amp; the &Gamma;<sub>coupling</sub> Model</h3>
+          <p>Standard reliability models &mdash; Black&rsquo;s equation for electromigration and Coffin-Manson for thermomechanical fatigue &mdash; are non-conservative by 1&ndash;3 orders of magnitude in deep space. These mechanisms are synergistically coupled: radiation-induced vacancy supersaturation lowers electromigration activation energy, while void growth nucleates fatigue cracks that expose fresh copper to accelerated diffusion.</p>
+          <p>Our &Gamma;<sub>coupling</sub> model captures this cascade. Copper interconnects reach 50% MTTF reduction within 50 years &mdash; invisible to all currently-used reliability tools. CNT critical-path replacement reduces &Gamma;<sub>coupling</sub> by ~10&sup6; and extends MTTF to century-scale.</p>
+          <div class="cnt-metrics">
+            <div class="cnt-metric"><strong>~10&sup6;&times;</strong><span>&Gamma;<sub>coupling</sub> reduction vs. copper</span></div>
+            <div class="cnt-metric"><strong>100 yr</strong><span>Extended MTTF projection</span></div>
+            <div class="cnt-metric"><strong>&gt;10&sup9; A/cm&sup2;</strong><span>Current density tolerance</span></div>
+            <div class="cnt-metric"><strong>4 K native</strong><span>Deep-space cryo operation</span></div>
+          </div>
+        </div>
+      </div>
+
+      <p class="table-heading">Reliability Model Comparison &mdash; Copper vs. CNT (50-year deep-space mission)</p>
+      <div class="reliability-table">
+        <div class="rt-row rt-header">
+          <span>Failure Mechanism</span><span>Copper (50 yr)</span><span>CNT Bundle</span><span>Current Model Coverage</span>
+        </div>
+        <div class="rt-row">
+          <span>Electromigration <em>(Black&rsquo;s Eq.)</em></span>
+          <span class="rt-warn">~10&sup5; hr MTTF degradation</span>
+          <span class="rt-good">&gt;10&#185;&#8304; hr projected</span>
+          <span class="rt-warn">Non-conservative 1&ndash;2 orders</span>
+        </div>
+        <div class="rt-row">
+          <span>Thermomechanical Fatigue <em>(Coffin-Manson)</em></span>
+          <span class="rt-warn">~10&sup4; hr @ &Delta;T = 150&deg;C</span>
+          <span class="rt-good">&gt;10&#185;&#8304; hr projected</span>
+          <span class="rt-warn">Non-conservative 1&ndash;2 orders</span>
+        </div>
+        <div class="rt-row">
+          <span>Radiation Displacement Damage</span>
+          <span class="rt-warn">Accelerated void nucleation</span>
+          <span class="rt-good">Near-zero vacancy supersaturation</span>
+          <span class="rt-bad">Absent from Black&rsquo;s Eq.</span>
+        </div>
+        <div class="rt-row rt-highlight">
+          <span><strong>&Gamma;<sub>coupling</sub> &mdash; Synergistic Cascade</strong></span>
+          <span class="rt-bad"><strong>50% MTTF loss at year 50</strong></span>
+          <span class="rt-good"><strong>~10&sup6;&times; reduction (CNT)</strong></span>
+          <span class="rt-bad"><strong>Absent from all current tools</strong></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission Timeline -->
+  <section class="section dark" id="timeline">
+    <div class="section-inner">
+      <div class="section-label">Program Roadmap</div>
+      <h2>Mission Timeline</h2>
+      <p class="section-sub">From ground-based reliability validation to century-scale autonomous deep-space operation and civilization-seed deployment.</p>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-left"><span class="tl-date">2024&ndash;2026</span><div class="tl-dot dot-active"></div></div>
+          <div class="tl-right">
+            <h3>Phase I &mdash; Architecture Definition</h3>
+            <p>Publication of five-paper Deep-Space Compute Architecture Program. &Gamma;<sub>coupling</sub> model derivation. HERALD co-design specification. AXIOM constitutional governance formalized in TLA+. CNT measurement protocol finalized.</p>
+            <div class="tl-chips"><span>HERALD</span><span>AXIOM</span><span>TLA+ Spec</span><span>Paper Series</span></div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-left"><span class="tl-date">2026&ndash;2028</span><div class="tl-dot dot-active"></div></div>
+          <div class="tl-right">
+            <h3>Phase II &mdash; &Gamma;<sub>coupling</sub> Measurement Campaign</h3>
+            <p>Experimental measurement of &Gamma;<sub>coupling</sub> to &plusmn;10% confidence using combined accelerated life test infrastructure applying electromigration, thermomechanical, and radiation loading simultaneously. Copper vs. CNT qualification dataset generation.</p>
+            <div class="tl-chips"><span>Reliability Testing</span><span>CNT Qualification</span><span>Combined Loading</span></div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-left"><span class="tl-date">2028&ndash;2031</span><div class="tl-dot"></div></div>
+          <div class="tl-right">
+            <h3>Phase III &mdash; HERALD Tapeout &amp; AXIOM Layer 2 Formal Verification</h3>
+            <p>First HERALD silicon tapeout with CNT critical-path interconnects. Formal verification of AXIOM Layer 2 entropy-floor firmware using Isabelle/HOL theorem prover. TMR redundancy qualification under simulated GCR spectrum at 10&sup8;&ndash;10&#185;&#8304; particles/cm&sup2;/yr.</p>
+            <div class="tl-chips"><span>Silicon Tapeout</span><span>Isabelle/HOL</span><span>TMR Qualification</span></div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-left"><span class="tl-date">2031&ndash;2035</span><div class="tl-dot"></div></div>
+          <div class="tl-right">
+            <h3>Phase IV &mdash; LEO Validation Mission (SXT-V01)</h3>
+            <p>Deploy integrated HERALD+AXIOM stack on LEO validation platform. Accumulate N<sub>threshold</sub> independent observations across diverse radiation environments. Real-time comparison of &Gamma;<sub>coupling</sub> predictions against live hardware telemetry. Pioneer token structure operationally validated.</p>
+            <div class="tl-chips"><span>SXT-V01</span><span>LEO Deployment</span><span>Live Telemetry</span><span>Pioneer Token</span></div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-left"><span class="tl-date">2035&ndash;2040</span><div class="tl-dot"></div></div>
+          <div class="tl-right">
+            <h3>Phase V &mdash; Deep-Space Qualification &amp; Fab Self-Replication</h3>
+            <p>Deploy self-replicating fab prototype beyond lunar orbit. First lasercomm design pipeline transmission test &mdash; Earth-to-ship chip design uplink at operational distance. AXIOM Pioneer veto token live. Level 1 fab self-replication achieved. ISRU feedstock processing initiated.</p>
+            <div class="tl-chips"><span>Cislunar</span><span>Lasercomm Pipeline</span><span>Level 1 Fab</span><span>ISRU</span></div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-left"><span class="tl-date">2040&ndash;2050</span><div class="tl-dot"></div></div>
+          <div class="tl-right">
+            <h3>Phase VI &mdash; Full Architecture Deployment</h3>
+            <p>First civilization seed ship deployment with complete HERALD-AXIOM-self-replicating-fab stack. Genetic library integration (50,000&ndash;200,000 donor genomes, triple-redundant cryogenic storage). Pioneer Program crew selection. Target: outer solar system waystation. Level 3 fab self-replication achieved.</p>
+            <div class="tl-chips"><span>Civilization Seed</span><span>Pioneer Program</span><span>Genetic Library</span><span>Level 3 Fab</span></div>
+          </div>
+        </div>
+        <div class="tl-item tl-far">
+          <div class="tl-left"><span class="tl-date">2050&ndash;2150</span><div class="tl-dot dot-far"></div></div>
+          <div class="tl-right">
+            <h3>Phase VII &mdash; Century-Scale Autonomous Operation</h3>
+            <p>AXIOM constitutional governance operational without Earth oversight. Lasercomm design pipeline delivering successive technology generations to deployed ships. Evolutionary chip design system producing architectures beyond current Earth baseline. Colony establishment sequence initiated at target body.</p>
+            <div class="tl-chips"><span>Autonomous</span><span>Tech Transfer</span><span>100-Year Mission</span><span>Colony Bootstrap</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Leadership -->
   <section class="section dark" id="leadership">
     <div class="section-inner">
@@ -293,8 +457,8 @@
         <ul>
           <li><a href="#missions">Active Missions</a></li>
           <li><a href="#technology">Technology</a></li>
-          <li><a href="#">Launch Services</a></li>
-          <li><a href="#">Satellite Division</a></li>
+          <li><a href="#compute">Compute Architecture</a></li>
+          <li><a href="#timeline">Mission Timeline</a></li>
         </ul>
       </div>
       <div class="footer-col">
