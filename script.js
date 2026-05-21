@@ -68,6 +68,27 @@ document.querySelectorAll('.card, .mission-card, .tech-item, .team-card, .press-
   fadeObserver.observe(el);
 });
 
+// ===== Navbar scroll state =====
+(function () {
+  const nb = document.querySelector('.navbar');
+  if (!nb) return;
+  const toggle = () => nb.classList.toggle('scrolled', window.scrollY > 40);
+  window.addEventListener('scroll', toggle, { passive: true });
+  toggle();
+})();
+
+// ===== Hero nebula parallax =====
+(function () {
+  const nebula = document.querySelector('.hero-nebula');
+  const stars  = document.getElementById('stars');
+  if (!nebula) return;
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    nebula.style.transform = `translateY(${y * 0.28}px)`;
+    if (stars) stars.style.transform = `translateY(${y * 0.12}px)`;
+  }, { passive: true });
+})();
+
 // ===== Launch Countdown Timers =====
 function updateCountdowns() {
   document.querySelectorAll('.countdown[data-target]').forEach(el => {
