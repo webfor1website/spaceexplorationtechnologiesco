@@ -3,126 +3,313 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Space Exploration Technologies Co.</title>
+  <title>Space Exploration Technologies Co. | Engineering the Future of Space</title>
+  <meta name="description" content="Space Exploration Technologies Co. designs, manufactures, and launches advanced spacecraft and launch vehicles for government and commercial clients worldwide." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+  <!-- Top bar -->
+  <div class="topbar">
+    <span>NASDAQ: SETC &nbsp;|&nbsp; +2.34 (1.18%)&nbsp; ▲</span>
+    <span>Headquarters: Houston, TX &nbsp;|&nbsp; Founded 2011 &nbsp;|&nbsp; 4,800+ Employees</span>
+  </div>
+
   <!-- Navigation -->
   <nav class="navbar">
-    <div class="nav-logo">🚀 SpaceEx Technologies</div>
+    <div class="nav-brand">
+      <div class="nav-logo-mark">S<span>E</span>T</div>
+      <div class="nav-logo-text">
+        <span class="logo-main">Space Exploration Technologies</span>
+        <span class="logo-sub">Co.</span>
+      </div>
+    </div>
     <ul class="nav-links">
-      <li><a href="#about">About</a></li>
+      <li><a href="#about">Company</a></li>
       <li><a href="#missions">Missions</a></li>
       <li><a href="#technology">Technology</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#leadership">Leadership</a></li>
+      <li><a href="#contact" class="nav-cta">Contact</a></li>
     </ul>
   </nav>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <section class="hero">
     <div class="stars" id="stars"></div>
+    <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1>Exploring the <span class="highlight">Final Frontier</span></h1>
-      <p>Pioneering humanity's journey beyond Earth — one launch at a time.</p>
-      <a href="#missions" class="btn">View Our Missions</a>
+      <p class="hero-eyebrow">Advancing the Future of Space</p>
+      <h1>Engineering Humanity's<br /><span class="highlight">Multi-Planetary Future</span></h1>
+      <p class="hero-sub">Space Exploration Technologies Co. designs, manufactures, and launches the world's most advanced rockets and spacecraft — delivering payloads to orbit and beyond.</p>
+      <div class="hero-actions">
+        <a href="#missions" class="btn btn-primary">View Active Missions</a>
+        <a href="#about" class="btn btn-ghost">About the Company</a>
+      </div>
     </div>
-    <div class="rocket" id="rocket">🚀</div>
+    <div class="hero-scroll"><span></span></div>
   </section>
 
-  <!-- About Section -->
+  <!-- Stats Bar -->
+  <div class="stats-bar">
+    <div class="stat"><span class="stat-num" data-target="247">0</span><span class="stat-label">Total Launches</span></div>
+    <div class="stat"><span class="stat-num" data-target="198">0</span><span class="stat-label">Successful Missions</span></div>
+    <div class="stat"><span class="stat-num" data-target="14">0</span><span class="stat-label">Active Satellites</span></div>
+    <div class="stat"><span class="stat-num" data-target="31">0</span><span class="stat-label">Government Contracts</span></div>
+  </div>
+
+  <!-- About -->
   <section class="section" id="about">
-    <h2>About Us</h2>
-    <p class="section-sub">We are a next-generation aerospace company dedicated to making space travel accessible, sustainable, and inspiring for all of humanity.</p>
-    <div class="cards">
-      <div class="card">
-        <div class="card-icon">🌍</div>
-        <h3>Our Vision</h3>
-        <p>A multi-planetary civilization that thrives across the solar system.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">🛰️</div>
-        <h3>Our Mission</h3>
-        <p>Design, build, and launch spacecraft that push the boundaries of what's possible.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">🔬</div>
-        <h3>Our Research</h3>
-        <p>Cutting-edge propulsion, life support, and orbital mechanics research.</p>
+    <div class="section-inner">
+      <div class="section-label">About the Company</div>
+      <h2>Redefining What's Possible<br />in Aerospace</h2>
+      <p class="section-sub">Founded in 2011, Space Exploration Technologies Co. is a privately held aerospace manufacturer and space transportation company headquartered in Houston, Texas. Our mission is to reduce the cost of space access and enable the long-term colonization of other planets.</p>
+      <div class="cards">
+        <div class="card">
+          <div class="card-line"></div>
+          <h3>Our Vision</h3>
+          <p>Establishing a self-sustaining human presence on multiple planets within our solar system, ensuring the long-term survival of humanity.</p>
+        </div>
+        <div class="card">
+          <div class="card-line"></div>
+          <h3>Our Mission</h3>
+          <p>Design, manufacture, and launch advanced rockets and spacecraft with rapid reusability, dramatically reducing the cost of access to space.</p>
+        </div>
+        <div class="card">
+          <div class="card-line"></div>
+          <h3>Our Research</h3>
+          <p>Pioneering breakthroughs in propulsion, life support systems, orbital mechanics, and autonomous spacecraft navigation.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Missions Section -->
+  <!-- Missions -->
   <section class="section dark" id="missions">
-    <h2>Active Missions</h2>
-    <p class="section-sub">Real-time status of our current deep-space programs.</p>
-    <div class="missions-grid">
-      <div class="mission-card">
-        <span class="status active">● ACTIVE</span>
-        <h3>Project Helios</h3>
-        <p>Solar observation satellite in low Earth orbit collecting solar wind data.</p>
-        <div class="progress-bar"><div class="progress" style="width: 72%"></div></div>
-        <small>Mission Progress: 72%</small>
-      </div>
-      <div class="mission-card">
-        <span class="status active">● ACTIVE</span>
-        <h3>Artemis Relay</h3>
-        <p>Deep-space communication relay positioned at the L2 Lagrange point.</p>
-        <div class="progress-bar"><div class="progress" style="width: 45%"></div></div>
-        <small>Mission Progress: 45%</small>
-      </div>
-      <div class="mission-card">
-        <span class="status planned">● PLANNED</span>
-        <h3>Mars Pathfinder II</h3>
-        <p>Next-gen rover mission targeting the Jezero Crater region of Mars.</p>
-        <div class="progress-bar"><div class="progress" style="width: 18%"></div></div>
-        <small>Mission Progress: 18%</small>
+    <div class="section-inner">
+      <div class="section-label">Operations</div>
+      <h2>Active Mission Portfolio</h2>
+      <p class="section-sub">Current status across our fleet of orbital and deep-space programs.</p>
+      <div class="missions-grid">
+        <div class="mission-card">
+          <div class="mission-header">
+            <span class="status active">ACTIVE</span>
+            <span class="mission-id">SXT-047</span>
+          </div>
+          <h3>Project Helios</h3>
+          <p>Solar observation satellite in low Earth orbit, collecting solar wind data and magnetospheric measurements for NASA's Heliophysics Division.</p>
+          <div class="progress-bar"><div class="progress" style="width: 72%"></div></div>
+          <div class="mission-footer"><small>Mission Progress: 72%</small><small>Launch: Mar 2024</small></div>
+        </div>
+        <div class="mission-card">
+          <div class="mission-header">
+            <span class="status active">ACTIVE</span>
+            <span class="mission-id">SXT-051</span>
+          </div>
+          <h3>Artemis Relay</h3>
+          <p>Deep-space communication relay satellite positioned at the Earth-Moon L2 Lagrange point, supporting lunar surface operations.</p>
+          <div class="progress-bar"><div class="progress" style="width: 45%"></div></div>
+          <div class="mission-footer"><small>Mission Progress: 45%</small><small>Launch: Nov 2024</small></div>
+        </div>
+        <div class="mission-card">
+          <div class="mission-header">
+            <span class="status planned">PLANNED</span>
+            <span class="mission-id">SXT-058</span>
+          </div>
+          <h3>Mars Pathfinder II</h3>
+          <p>Next-generation rover mission targeting the Jezero Crater region of Mars, building on data collected by the original Pathfinder program.</p>
+          <div class="progress-bar"><div class="progress" style="width: 18%"></div></div>
+          <div class="mission-footer"><small>Mission Progress: 18%</small><small>Target: Q3 2026</small></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Technology Section -->
+  <!-- Technology -->
   <section class="section" id="technology">
-    <h2>Our Technology</h2>
-    <p class="section-sub">Built for the extreme environments of space.</p>
-    <div class="tech-list">
-      <div class="tech-item">
-        <h3>⚡ Ion Propulsion</h3>
-        <p>High-efficiency electric propulsion for deep-space missions with unprecedented fuel economy.</p>
-      </div>
-      <div class="tech-item">
-        <h3>🧊 Cryogenic Systems</h3>
-        <p>Advanced liquid hydrogen/oxygen storage systems for long-duration missions.</p>
-      </div>
-      <div class="tech-item">
-        <h3>🤖 Autonomous Navigation</h3>
-        <p>AI-driven guidance systems capable of real-time path correction without Earth input.</p>
-      </div>
-      <div class="tech-item">
-        <h3>🛡️ Radiation Shielding</h3>
-        <p>Proprietary multi-layer shielding protecting crew and electronics from cosmic radiation.</p>
+    <div class="section-inner">
+      <div class="section-label">Engineering</div>
+      <h2>Proprietary Technology Stack</h2>
+      <p class="section-sub">Every component engineered in-house to meet the demands of deep-space exploration.</p>
+      <div class="tech-list">
+        <div class="tech-item">
+          <div class="tech-num">01</div>
+          <div>
+            <h3>Ion Propulsion System</h3>
+            <p>High-efficiency Hall-effect thruster arrays providing sustained acceleration for deep-space missions, achieving Isp values exceeding 3,000 seconds.</p>
+          </div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-num">02</div>
+          <div>
+            <h3>Cryogenic Fuel Management</h3>
+            <p>Advanced liquid hydrogen/oxygen storage and transfer systems with zero-boiloff capability for missions exceeding 18 months duration.</p>
+          </div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-num">03</div>
+          <div>
+            <h3>Autonomous GNC</h3>
+            <p>AI-driven guidance, navigation, and control systems executing real-time path correction and obstacle avoidance without Earth-based input.</p>
+          </div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-num">04</div>
+          <div>
+            <h3>Multi-Layer Radiation Shielding</h3>
+            <p>Proprietary composite shielding architecture reducing crew radiation exposure to below NCRP-132 limits for 36-month deep-space transit.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
+  <!-- Leadership -->
+  <section class="section dark" id="leadership">
+    <div class="section-inner">
+      <div class="section-label">Leadership</div>
+      <h2>Executive Team</h2>
+      <p class="section-sub">Experienced operators, engineers, and scientists committed to advancing the frontiers of space exploration.</p>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-avatar">JM</div>
+          <h3>Dr. James Mercer</h3>
+          <p class="team-title">Chief Executive Officer</p>
+          <p class="team-bio">Former NASA Deputy Administrator. Ph.D. Aerospace Engineering, MIT. 30+ years in government and commercial spaceflight.</p>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar">SR</div>
+          <h3>Dr. Sarah Rhodes</h3>
+          <p class="team-title">Chief Technology Officer</p>
+          <p class="team-bio">Former JPL Principal Engineer. Led propulsion development on three Mars missions. Ph.D. Mechanical Engineering, Caltech.</p>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar">TK</div>
+          <h3>Thomas Kline</h3>
+          <p class="team-title">Chief Financial Officer</p>
+          <p class="team-bio">Previously CFO at Lockheed Martin Space. MBA Harvard Business School. Oversees a $2.4B annual operating budget.</p>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar">AL</div>
+          <h3>Dr. Anika Larsen</h3>
+          <p class="team-title">VP, Mission Operations</p>
+          <p class="team-bio">Former ESA Flight Director. Directed 40+ orbital missions. Ph.D. Aerospace Systems, TU Delft.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Press -->
+  <section class="section" id="press">
+    <div class="section-inner">
+      <div class="section-label">Newsroom</div>
+      <h2>Latest Press Releases</h2>
+      <div class="press-list">
+        <a href="#" class="press-item">
+          <span class="press-date">May 14, 2025</span>
+          <div>
+            <h3>SETC Awarded $840M NASA Contract for Lunar Gateway Resupply Missions</h3>
+            <p>The contract covers six resupply missions to the Lunar Gateway station between 2027 and 2032.</p>
+          </div>
+          <span class="press-arrow">&#8594;</span>
+        </a>
+        <a href="#" class="press-item">
+          <span class="press-date">Apr 02, 2025</span>
+          <div>
+            <h3>Successful Static Fire Test of Next-Generation Meridian Engine Completed</h3>
+            <p>The Meridian-9 engine achieved full thrust of 1.9 MN during a 120-second test at our Stennis facility.</p>
+          </div>
+          <span class="press-arrow">&#8594;</span>
+        </a>
+        <a href="#" class="press-item">
+          <span class="press-date">Feb 19, 2025</span>
+          <div>
+            <h3>Project Helios Satellite Exceeds Primary Mission Objectives at 18 Months</h3>
+            <p>Solar wind data collected has provided new insights into coronal mass ejection prediction models.</p>
+          </div>
+          <span class="press-arrow">&#8594;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
   <section class="section dark" id="contact">
-    <h2>Contact Us</h2>
-    <p class="section-sub">Ready to partner with us or join the mission?</p>
-    <form class="contact-form" id="contactForm">
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea placeholder="Your Message" rows="5" required></textarea>
-      <button type="submit" class="btn">Send Message</button>
-    </form>
-    <p id="formMsg" class="form-msg"></p>
+    <div class="section-inner contact-inner">
+      <div>
+        <div class="section-label">Get in Touch</div>
+        <h2>Partner With Us</h2>
+        <p class="section-sub" style="text-align:left;margin-left:0;">Whether you represent a government agency, commercial operator, or research institution, we welcome the opportunity to discuss how SETC can support your mission objectives.</p>
+        <div class="contact-info">
+          <div class="contact-detail"><strong>General Inquiries</strong><span>info@spaceexplorationtechnologiesco.com</span></div>
+          <div class="contact-detail"><strong>Media Relations</strong><span>press@spaceexplorationtechnologiesco.com</span></div>
+          <div class="contact-detail"><strong>Headquarters</strong><span>1 Rocket Road, Houston, TX 77058</span></div>
+          <div class="contact-detail"><strong>Phone</strong><span>+1 (713) 555-0192</span></div>
+        </div>
+      </div>
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <input type="text" placeholder="Full Name" required />
+          <input type="text" placeholder="Organization" />
+        </div>
+        <input type="email" placeholder="Email Address" required />
+        <select>
+          <option value="" disabled selected>Area of Inquiry</option>
+          <option>Launch Services</option>
+          <option>Satellite Manufacturing</option>
+          <option>Government Contract</option>
+          <option>Research Partnership</option>
+          <option>Media / Press</option>
+          <option>Careers</option>
+        </select>
+        <textarea placeholder="Message" rows="5" required></textarea>
+        <button type="submit" class="btn btn-primary">Submit Inquiry</button>
+        <p id="formMsg" class="form-msg"></p>
+      </form>
+    </div>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <p>© 2025 Space Exploration Technologies Co. All rights reserved.</p>
-    <p>🌌 Ad astra per aspera</p>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="nav-logo-mark small">S<span>E</span>T</div>
+        <p>Space Exploration Technologies Co.<br />Advancing humanity beyond Earth.</p>
+        <p class="footer-tagline">Ad astra per aspera</p>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#leadership">Leadership</a></li>
+          <li><a href="#press">Newsroom</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Programs</h4>
+        <ul>
+          <li><a href="#missions">Active Missions</a></li>
+          <li><a href="#technology">Technology</a></li>
+          <li><a href="#">Launch Services</a></li>
+          <li><a href="#">Satellite Division</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">ITAR Compliance</a></li>
+          <li><a href="#">Export Controls</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Space Exploration Technologies Co. All rights reserved. &nbsp;|&nbsp; CAGE Code: 7X4R2 &nbsp;|&nbsp; DUNS: 08-147-5892</p>
+    </div>
   </footer>
 
   <script src="script.js"></script>
