@@ -122,6 +122,41 @@ function updateCountdowns() {
 setInterval(updateCountdowns, 1000);
 updateCountdowns();
 
+// ===== Falcon 9 segment loop (1:00:15 – 1:00:58) =====
+(function () {
+  const START = 3615;
+
+  function initF9Player() {
+    var el = document.getElementById('vid-falcon9');
+    if (!el) return;
+    new YT.Player('vid-falcon9', {
+      events: {
+        onStateChange: function (e) {
+          if (e.data === 0) { // 0 = ended
+            e.target.seekTo(START, true);
+            e.target.playVideo();
+          }
+        }
+      }
+    });
+  }
+
+  if (window.YT && window.YT.Player) {
+    initF9Player();
+  } else {
+    var prev = window.onYouTubeIframeAPIReady;
+    window.onYouTubeIframeAPIReady = function () {
+      if (typeof prev === 'function') prev();
+      initF9Player();
+    };
+    if (!document.querySelector('script[src*="youtube.com/iframe_api"]')) {
+      var s = document.createElement('script');
+      s.src = 'https://www.youtube.com/iframe_api';
+      document.head.appendChild(s);
+    }
+  }
+})();
+
 // ===== Vehicle video play/pause =====
 (function () {
   function ytCmd(iframe, func) {
