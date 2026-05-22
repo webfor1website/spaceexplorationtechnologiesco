@@ -122,32 +122,37 @@ function updateCountdowns() {
 setInterval(updateCountdowns, 1000);
 updateCountdowns();
 
-// ===== Falcon 9 segment loop (1:00:15 – 1:00:58) =====
+// ===== Vehicle segment loops (IFrame API) =====
 (function () {
-  const START = 3615;
+  var segments = [
+    { id: 'vid-falcon9',      start: 3615 }, // 1:00:15 – 1:00:58
+    { id: 'vid-falcon-heavy', start: 30   }, // 0:30 – 1:06
+  ];
 
-  function initF9Player() {
-    var el = document.getElementById('vid-falcon9');
-    if (!el) return;
-    new YT.Player('vid-falcon9', {
-      events: {
-        onStateChange: function (e) {
-          if (e.data === 0) { // 0 = ended
-            e.target.seekTo(START, true);
-            e.target.playVideo();
+  function initSegmentPlayers() {
+    segments.forEach(function (seg) {
+      var el = document.getElementById(seg.id);
+      if (!el) return;
+      new YT.Player(seg.id, {
+        events: {
+          onStateChange: function (e) {
+            if (e.data === 0) { // 0 = ended
+              e.target.seekTo(seg.start, true);
+              e.target.playVideo();
+            }
           }
         }
-      }
+      });
     });
   }
 
   if (window.YT && window.YT.Player) {
-    initF9Player();
+    initSegmentPlayers();
   } else {
     var prev = window.onYouTubeIframeAPIReady;
     window.onYouTubeIframeAPIReady = function () {
       if (typeof prev === 'function') prev();
-      initF9Player();
+      initSegmentPlayers();
     };
     if (!document.querySelector('script[src*="youtube.com/iframe_api"]')) {
       var s = document.createElement('script');
