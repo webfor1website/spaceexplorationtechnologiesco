@@ -1033,7 +1033,6 @@ small {
   .hero-video-wrap { display: none; }
   .hero-video-fallback { display: block; }
   .logo-strip-inner { gap: 1.75rem; justify-content: flex-start; padding: 0 1rem; }
-  .vehicle-iframe { display: none; }
   .vehicle-video .vehicle-fallback { display: block; }
   .video-toggle { display: none; }
 }
@@ -1440,12 +1439,13 @@ small {
   transform: scale(1.4);
   pointer-events: none;
   border: none;
+  z-index: 1;
 }
 .vehicle-video::after {
   content: '';
   position: absolute;
   inset: 0;
-  z-index: 2;
+  z-index: 3;
   pointer-events: none;
   background:
     linear-gradient(to bottom, rgba(0,0,0,0.82) 0%, transparent 22%),
@@ -1460,6 +1460,7 @@ small {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  z-index: 0;
 }
 .video-toggle {
   position: absolute;
