@@ -1476,6 +1476,12 @@ small {
   transition: border-color 0.2s, transform 0.2s;
 }
 .rocket-card:hover { border-color: var(--border-accent); transform: translateY(-2px); }
+.rocket-card,
+.rocket-card:hover {
+  background: var(--bg-card) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
 .rocket-card-img {
   position: relative;
   aspect-ratio: 16 / 9;
