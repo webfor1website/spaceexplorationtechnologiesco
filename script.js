@@ -73,6 +73,36 @@ document.querySelectorAll('.card, .mission-card, .tech-item, .team-card, .press-
   fadeObserver.observe(el);
 });
 
+// ===== Hamburger menu =====
+(function () {
+  const btn   = document.getElementById('navHamburger');
+  const links = document.querySelector('.nav-links');
+  if (!btn || !links) return;
+
+  function close() {
+    links.classList.remove('open');
+    btn.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+    btn.setAttribute('aria-label', 'Open menu');
+  }
+
+  btn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    const isOpen = links.classList.toggle('open');
+    btn.classList.toggle('open', isOpen);
+    btn.setAttribute('aria-expanded', String(isOpen));
+    btn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+  });
+
+  links.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', close);
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!btn.contains(e.target) && !links.contains(e.target)) close();
+  });
+})();
+
 // ===== Navbar scroll state =====
 (function () {
   const nb = document.querySelector('.navbar');
