@@ -1030,7 +1030,6 @@ small {
 }
 
 @media (max-width: 768px) {
-  .hero-video-wrap { display: none; }
   .hero-video-fallback { display: block; }
   .logo-strip-inner { gap: 1.75rem; justify-content: flex-start; padding: 0 1rem; }
   .vehicle-video .vehicle-fallback { display: block; }
