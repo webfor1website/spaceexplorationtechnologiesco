@@ -122,6 +122,27 @@ function updateCountdowns() {
 setInterval(updateCountdowns, 1000);
 updateCountdowns();
 
+// ===== Vehicle video play/pause =====
+(function () {
+  function ytCmd(iframe, func) {
+    iframe.contentWindow.postMessage(
+      JSON.stringify({ event: 'command', func, args: [] }), '*'
+    );
+  }
+
+  document.querySelectorAll('.video-toggle').forEach(btn => {
+    let paused = false;
+    const iframe = btn.closest('.vehicle-video').querySelector('.vehicle-iframe');
+    btn.addEventListener('click', () => {
+      paused = !paused;
+      ytCmd(iframe, paused ? 'pauseVideo' : 'playVideo');
+      btn.querySelector('.vt-icon').innerHTML = paused ? '&#9654;' : '&#9646;&#9646;';
+      btn.setAttribute('aria-label', paused ? 'Play video' : 'Pause video');
+      btn.classList.toggle('is-paused', paused);
+    });
+  });
+})();
+
 // ===== Contact form =====
 document.getElementById('contactForm').addEventListener('submit', function (e) {
   e.preventDefault();

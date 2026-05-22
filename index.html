@@ -207,7 +207,14 @@
       <!-- Starship Hero -->
       <div class="rocket-hero">
         <div class="rocket-hero-img">
-          <img src="images/starship.jpg" alt="Starship Super Heavy booster returning to Mechazilla catch — IFT-5, October 13 2024" loading="lazy" />
+          <div class="vehicle-video">
+            <iframe id="vid-starship" class="vehicle-iframe"
+              src="https://www.youtube.com/embed/_krgcofiM6M?autoplay=1&mute=1&loop=1&controls=0&playlist=_krgcofiM6M&modestbranding=1&rel=0&enablejsapi=1"
+              allow="autoplay; encrypted-media" frameborder="0"
+              title="Starship IFT-5 booster catch"></iframe>
+            <img src="images/starship.jpg" alt="Starship IFT-5 booster catch" class="vehicle-fallback" />
+            <button class="video-toggle" aria-label="Pause video"><span class="vt-icon">&#9646;&#9646;</span></button>
+          </div>
           <div class="rocket-hero-badge"><span class="rstatus rstatus-testing">FLIGHT TESTING</span></div>
         </div>
         <div class="rocket-hero-content">
@@ -230,7 +237,14 @@
       <div class="rocket-grid">
         <div class="rocket-card">
           <div class="rocket-card-img">
-            <img src="images/falcon9.jpg" alt="Falcon 9 night launch — Crew Dragon Demo-2, May 30 2020 (NASA)" loading="lazy" />
+            <div class="vehicle-video">
+              <iframe id="vid-falcon9" class="vehicle-iframe"
+                src="https://www.youtube.com/embed/ANv5UfZsvZQ?autoplay=1&mute=1&loop=1&controls=0&playlist=ANv5UfZsvZQ&modestbranding=1&rel=0&enablejsapi=1"
+                allow="autoplay; encrypted-media" frameborder="0"
+                title="Falcon 9 booster landing" loading="lazy"></iframe>
+              <img src="images/falcon9.jpg" alt="Falcon 9 launch" class="vehicle-fallback" />
+              <button class="video-toggle" aria-label="Pause video"><span class="vt-icon">&#9646;&#9646;</span></button>
+            </div>
             <span class="rstatus rstatus-active">OPERATIONAL</span>
           </div>
           <div class="rocket-card-body">
@@ -248,7 +262,14 @@
 
         <div class="rocket-card">
           <div class="rocket-card-img">
-            <img src="images/falcon-heavy.jpg" alt="Falcon Heavy test flight launch — February 6 2018" loading="lazy" />
+            <div class="vehicle-video">
+              <iframe id="vid-falcon-heavy" class="vehicle-iframe"
+                src="https://www.youtube.com/embed/s6UQTwrkvYg?autoplay=1&mute=1&loop=1&controls=0&playlist=s6UQTwrkvYg&modestbranding=1&rel=0&enablejsapi=1"
+                allow="autoplay; encrypted-media" frameborder="0"
+                title="Falcon Heavy dual booster landing" loading="lazy"></iframe>
+              <img src="images/falcon-heavy.jpg" alt="Falcon Heavy launch" class="vehicle-fallback" />
+              <button class="video-toggle" aria-label="Pause video"><span class="vt-icon">&#9646;&#9646;</span></button>
+            </div>
             <span class="rstatus rstatus-active">OPERATIONAL</span>
           </div>
           <div class="rocket-card-body">
@@ -266,7 +287,14 @@
 
         <div class="rocket-card">
           <div class="rocket-card-img">
-            <img src="images/dragon.jpg" alt="Crew Dragon 2 docked at the ISS (NASA)" loading="lazy" />
+            <div class="vehicle-video">
+              <iframe id="vid-dragon" class="vehicle-iframe"
+                src="https://www.youtube.com/embed/mhFQA098s5w?autoplay=1&mute=1&loop=1&controls=0&playlist=mhFQA098s5w&modestbranding=1&rel=0&enablejsapi=1"
+                allow="autoplay; encrypted-media" frameborder="0"
+                title="Dragon ISS docking" loading="lazy"></iframe>
+              <img src="images/dragon.jpg" alt="Dragon capsule" class="vehicle-fallback" />
+              <button class="video-toggle" aria-label="Pause video"><span class="vt-icon">&#9646;&#9646;</span></button>
+            </div>
             <span class="rstatus rstatus-active">CREW &amp; CARGO</span>
           </div>
           <div class="rocket-card-body">
