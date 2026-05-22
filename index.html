@@ -17,7 +17,7 @@
   <meta property="og:site_name" content="Space Exploration Technologies Co." />
   <meta property="og:title" content="SpaceX &amp; SpaceXAI | Starship, Grok-4, Colossus &amp; More" />
   <meta property="og:description" content="The full empire — Starship catching its booster mid-air, Falcon 9 flying daily, Grok-4 topping every AI benchmark, and Colossus powering it all. One company. Many frontiers." />
-  <meta property="og:image" content="images/starship.jpg" />
+  <meta property="og:image" content="https://www.spaceexplorationtechnologiesco.com/images/starship.jpg" />
   <meta property="og:image:alt" content="Starship Super Heavy booster returning to Mechazilla — IFT-5" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -29,7 +29,7 @@
   <meta name="twitter:site" content="@SpaceX" />
   <meta name="twitter:title" content="SpaceX &amp; SpaceXAI | Starship, Grok-4, Colossus &amp; More" />
   <meta name="twitter:description" content="The full empire — Starship catching its booster mid-air, Falcon 9 flying daily, Grok-4 topping every AI benchmark, and Colossus powering it all." />
-  <meta name="twitter:image" content="images/starship.jpg" />
+  <meta name="twitter:image" content="https://www.spaceexplorationtechnologiesco.com/images/starship.jpg" />
   <meta name="twitter:image:alt" content="Starship Super Heavy booster returning to Mechazilla — IFT-5" />
 
   <!-- Structured Data: Organization (JSON-LD) -->
@@ -40,7 +40,7 @@
     "name": "Space Exploration Technologies Co.",
     "alternateName": ["SpaceX", "SpaceXAI"],
     "url": "https://www.spaceexplorationtechnologiesco.com/",
-    "logo": "images/starship.jpg",
+    "logo": "https://www.spaceexplorationtechnologiesco.com/images/starship.jpg",
     "description": "SpaceX and SpaceXAI — rockets, AI, and satellite internet reshaping civilization. Starship, Falcon 9, Falcon Heavy, Dragon, Starlink, Grok-4, Colossus, Cursor, and X Platform.",
     "foundingDate": "2002",
     "founder": {
@@ -721,7 +721,8 @@
           <div class="contact-detail"><strong>Phone</strong><span>+1 (713) 555-0192</span></div>
         </div>
       </div>
-      <form class="contact-form" id="contactForm">
+      <form class="contact-form" id="contactForm" name="contact" netlify>
+        <input type="hidden" name="form-name" value="contact" />
         <div class="form-row">
           <input type="text" placeholder="Full Name" required />
           <input type="text" placeholder="Organization" />
