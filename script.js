@@ -122,38 +122,47 @@ function updateCountdowns() {
 setInterval(updateCountdowns, 1000);
 updateCountdowns();
 
-// ===== Vehicle clip segment loops =====
+// ===== Vehicle clip segment loops (IFrame API) =====
 (function () {
-  function ytCmd(iframe, func, args) {
-    if (!iframe || !iframe.contentWindow) return;
-    iframe.contentWindow.postMessage(
-      JSON.stringify({ event: 'command', func: func, args: args || [] }), '*'
-    );
+  var segMap = {
+    'vid-falcon9':      { start: 3615,  end: 3658  },
+    'vid-falcon-heavy': { start: 30,    end: 66    },
+    'vid-dragon':       { start: 14791, end: 14813 },
+    'vid-starlink':     { start: 195,   end: 210   },
+  };
+  var players = {};
+
+  function initPlayers() {
+    Object.keys(segMap).forEach(function (id) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      players[id] = new YT.Player(id, {});
+    });
+
+    setInterval(function () {
+      Object.keys(players).forEach(function (id) {
+        var p = players[id];
+        var seg = segMap[id];
+        if (!p || typeof p.getCurrentTime !== 'function') return;
+        try {
+          var t = p.getCurrentTime();
+          if (t > 0 && t >= seg.end - 1) {
+            p.seekTo(seg.start, true);
+            p.playVideo();
+          }
+        } catch (ignore) {}
+      });
+    }, 500);
   }
 
-  var clips = [
-    { id: 'vid-falcon9',      start: 3615,  end: 3658  },
-    { id: 'vid-falcon-heavy', start: 30,    end: 66    },
-    { id: 'vid-dragon',       start: 14791, end: 14813 },
-    { id: 'vid-starlink',     start: 195,   end: 210   }, // 3:15 – 3:30
-  ];
-
-  clips.forEach(function (clip) {
-    var iframe = document.getElementById(clip.id);
-    if (!iframe) return;
-    var clipMs = (clip.end - clip.start - 1) * 1000; // fire 1s before end
-    var plays = 0;
-
-    function seekBack() {
-      plays++;
-      if (plays > 10) return;
-      ytCmd(iframe, 'seekTo', [clip.start, true]);
-      ytCmd(iframe, 'playVideo');
-      setTimeout(seekBack, clipMs);
-    }
-
-    setTimeout(seekBack, clipMs + 2000); // +2s initial buffer for page load
-  });
+  var prev = window.onYouTubeIframeAPIReady;
+  window.onYouTubeIframeAPIReady = function () {
+    if (typeof prev === 'function') prev();
+    initPlayers();
+  };
+  var s = document.createElement('script');
+  s.src = 'https://www.youtube.com/iframe_api';
+  document.head.appendChild(s);
 })();
 
 // ===== Vehicle video play/pause =====
