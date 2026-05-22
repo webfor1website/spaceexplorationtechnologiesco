@@ -314,7 +314,14 @@
       <!-- Starlink Banner -->
       <div class="starlink-banner">
         <div class="starlink-img-wrap">
-          <img src="images/starlink.jpg" alt="Starlink satellite deployment mission" loading="lazy" />
+          <div class="vehicle-video">
+            <iframe id="vid-starlink" class="vehicle-iframe"
+              src="https://www.youtube.com/embed/-XRGZYJo8Cc?autoplay=1&mute=1&loop=1&controls=0&playlist=-XRGZYJo8Cc&modestbranding=1&rel=0&enablejsapi=1&start=195&end=210"
+              allow="autoplay; encrypted-media" frameborder="0"
+              title="Starlink satellite deployment" loading="lazy"></iframe>
+            <img src="images/starlink.jpg" alt="Starlink satellite deployment mission" class="vehicle-fallback" />
+            <button class="video-toggle" aria-label="Pause video"><span class="vt-icon">&#9646;&#9646;</span></button>
+          </div>
         </div>
         <div class="starlink-content">
           <div class="section-label">Satellite Internet</div>

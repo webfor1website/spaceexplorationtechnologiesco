@@ -1470,7 +1470,8 @@ small {
   flex-shrink: 0;
 }
 .rocket-hero-img:hover .video-toggle,
-.rocket-card-img:hover .video-toggle { opacity: 1; }
+.rocket-card-img:hover .video-toggle,
+.starlink-img-wrap:hover .video-toggle { opacity: 1; }
 .video-toggle.is-paused .vt-icon::before { content: '\25B6'; }
 
 /* Rockets 3-col grid */
@@ -1564,6 +1565,9 @@ small {
   border-radius: 10px;
   overflow: hidden;
   margin-top: 0.5rem;
+}
+.starlink-img-wrap {
+  position: relative;
 }
 .starlink-img-wrap img {
   width: 100%;

@@ -135,6 +135,7 @@ updateCountdowns();
     { id: 'vid-falcon9',      start: 3615,  end: 3658  },
     { id: 'vid-falcon-heavy', start: 30,    end: 66    },
     { id: 'vid-dragon',       start: 14791, end: 14813 },
+    { id: 'vid-starlink',     start: 195,   end: 210   }, // 3:15 – 3:30
   ];
 
   clips.forEach(function (clip) {
