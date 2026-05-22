@@ -19,34 +19,39 @@
   }
 })();
 
-// ===== Stats counter =====
+// ===== Stats Counters =====
 function animateCounter(el) {
-  const target = parseInt(el.dataset.target, 10);
-  const suffix = el.dataset.suffix || '';
-  const duration = 1800;
-  const start = performance.now();
+  const target   = parseFloat(el.dataset.target);
+  const suffix   = el.dataset.suffix || '';
+  const decimal  = el.dataset.target.includes('.');
+  const duration = 2500;
+  const start    = performance.now();
+
+  function easeOutQuad(t) { return t * (2 - t); }
+
   function update(now) {
-    const elapsed = now - start;
+    const elapsed  = now - start;
     const progress = Math.min(elapsed / duration, 1);
-    const ease = 1 - Math.pow(1 - progress, 3);
-    const value = Math.floor(ease * target);
-    el.textContent = value + (progress < 1 ? '' : suffix);
+    const eased    = easeOutQuad(progress);
+    const value    = decimal
+      ? (eased * target).toFixed(1)
+      : Math.floor(eased * target);
+    el.textContent = value + suffix;
     if (progress < 1) requestAnimationFrame(update);
   }
+
   requestAnimationFrame(update);
 }
 
-const statsObserver = new IntersectionObserver((entries) => {
+const counterObserver = new IntersectionObserver((entries, obs) => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.querySelectorAll('.stat-num').forEach(animateCounter);
-      statsObserver.unobserve(entry.target);
-    }
+    if (!entry.isIntersecting) return;
+    animateCounter(entry.target);
+    obs.unobserve(entry.target);
   });
-}, { threshold: 0.3 });
+}, { threshold: 0.4 });
 
-const statsBar = document.querySelector('.stats-bar');
-if (statsBar) statsObserver.observe(statsBar);
+document.querySelectorAll('.stat-num').forEach(el => counterObserver.observe(el));
 
 // ===== Fade-in on scroll =====
 const fadeStyle = document.createElement('style');
