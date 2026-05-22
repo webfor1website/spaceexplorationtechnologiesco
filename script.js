@@ -126,7 +126,8 @@ updateCountdowns();
 (function () {
   var segments = [
     { id: 'vid-falcon9',      start: 3615 }, // 1:00:15 – 1:00:58
-    { id: 'vid-falcon-heavy', start: 30   }, // 0:30 – 1:06
+    { id: 'vid-falcon-heavy', start: 30    }, // 0:30 – 1:06
+    { id: 'vid-dragon',       start: 14791 }, // 4:06:31 – 4:06:53
   ];
 
   function initSegmentPlayers() {
