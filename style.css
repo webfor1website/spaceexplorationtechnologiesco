@@ -111,6 +111,55 @@
   border-top: 1px solid var(--border);
 }
 
+/* ===== Resources Page Styles ===== */
+.resources-section {
+  margin-bottom: 4rem;
+}
+
+.resources-section h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.75rem;
+}
+
+.resources-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.resource-link {
+  display: block;
+  text-decoration: none;
+  color: var(--text);
+  transition: transform 0.2s, color 0.2s;
+}
+
+.resource-link:hover {
+  transform: translateX(8px);
+}
+
+.resource-link:hover h3 {
+  color: var(--accent);
+}
+
+.resource-link h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+  transition: color 0.2s;
+}
+
+.resource-link p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
 html {
   scroll-behavior: smooth;
 }
