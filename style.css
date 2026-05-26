@@ -1667,7 +1667,8 @@ small {
   gap: 0.45rem;
   flex-wrap: wrap;
 }
-.tl-chips span {
+.tl-chips span,
+.tl-chips a {
   font-size: 0.62rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -1677,6 +1678,13 @@ small {
   border: 1px solid var(--border-accent);
   padding: 0.18rem 0.5rem;
   border-radius: 3px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+.tl-chips a:hover {
+  background: rgba(29,111,232,0.18);
+  color: #93c5fd;
+  border-color: rgba(29,111,232,0.4);
 }
 
 /* ===== Specs Accordion ===== */
