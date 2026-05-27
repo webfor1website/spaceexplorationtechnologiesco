@@ -220,107 +220,52 @@
   </div>
 
   <!-- About -->
-  <section class="section" id="about">
-    <div class="section-inner">
-      <div class="section-label">About the Company</div>
-      <h2>Redefining What's Possible<br />in Aerospace</h2>
-      <p class="section-sub">Founded in 2011, Space Exploration Technologies Co. is a privately held aerospace manufacturer and space transportation company headquartered in Houston, Texas. Our mission is to reduce the cost of space access and enable the long-term colonization of other planets.</p>
-      <div class="cards">
-        <div class="card">
-          <div class="card-line"></div>
-          <h3>Our Vision</h3>
-          <p>Establishing a self-sustaining human presence on multiple planets within our solar system, ensuring the long-term survival of humanity.</p>
-        </div>
-        <div class="card">
-          <div class="card-line"></div>
-          <h3>Our Mission</h3>
-          <p>Design, manufacture, and launch advanced rockets and spacecraft with rapid reusability, dramatically reducing the cost of access to space.</p>
-        </div>
-        <div class="card">
-          <div class="card-line"></div>
-          <h3>Our Research</h3>
-          <p>Pioneering breakthroughs in propulsion, life support systems, orbital mechanics, and autonomous spacecraft navigation.</p>
-        </div>
+  <!-- Background image: falcon9-sunrise.jpg -->
+  <section class="section-hero" id="about">
+    <div class="section-hero-bg" style="background-image: url('images/falcon9-sunrise.jpg');"></div>
+    <div class="section-hero-overlay"></div>
+    <div class="section-hero-content">
+      <span class="section-eyebrow">About the Company</span>
+      <h2>Redefining What's Possible<br>in Aerospace</h2>
+      <p class="section-hero-sub">Founded in 2011. Headquarters: 1 Rocket Road, Starbase, Texas. Mission: reduce the cost of space access and enable the long-term colonization of other planets.</p>
+    </div>
+  </section>
+
+  <!-- About Content -->
+  <section class="section-content">
+    <div class="cards">
+      <div class="card">
+        <div class="card-line"></div>
+        <h3>Our Vision</h3>
+        <p>Establishing a self-sustaining human presence on multiple planets within our solar system, ensuring the long-term survival of humanity.</p>
+      </div>
+      <div class="card">
+        <div class="card-line"></div>
+        <h3>Our Mission</h3>
+        <p>Design, manufacture, and launch advanced rockets and spacecraft with rapid reusability, dramatically reducing the cost of access to space.</p>
+      </div>
+      <div class="card">
+        <div class="card-line"></div>
+        <h3>Our Research</h3>
+        <p>Pioneering breakthroughs in propulsion, life support systems, orbital mechanics, and autonomous spacecraft navigation.</p>
       </div>
     </div>
   </section>
 
   <!-- Missions -->
-  <section id="missions" style="
-    position: relative;
-    width: 100%;
-    min-height: 70vh;
-    display: flex;
-    align-items: flex-end;
-    padding: 0;
-    overflow: hidden;
-    margin-bottom: 0;
-  ">
-    <!-- Full bleed background image -->
-    <div style="
-      position: absolute;
-      inset: 0;
-      background-image: url('images/starship.jpg');
-      background-size: cover;
-      background-position: center 30%;
-      background-attachment: fixed;
-      z-index: 0;
-    "></div>
-    
-    <!-- Dark gradient overlay -->
-    <div style="
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        to bottom,
-        rgba(0,0,0,0.1) 0%,
-        rgba(0,0,0,0.3) 40%,
-        rgba(0,0,0,0.85) 100%
-      );
-      z-index: 1;
-    "></div>
-    
-    <!-- Text content -->
-    <div style="
-      position: relative;
-      z-index: 2;
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 80px 48px;
-    ">
-      <p style="
-        font-size: 11px;
-        font-weight: 600;
-        letter-spacing: 0.15em;
-        text-transform: uppercase;
-        color: rgba(255,255,255,0.6);
-        margin-bottom: 20px;
-      ">Launch Vehicles</p>
-      
-      <h2 style="
-        font-size: clamp(42px, 6vw, 80px);
-        font-weight: 300;
-        line-height: 1.05;
-        color: #ffffff;
-        max-width: 700px;
-        margin-bottom: 24px;
-        letter-spacing: -0.02em;
-      ">The Fleet That Rewrote<br>the Rules of Space</h2>
-      
-      <p style="
-        font-size: 18px;
-        color: rgba(255,255,255,0.75);
-        max-width: 520px;
-        line-height: 1.6;
-        margin-bottom: 40px;
-        font-weight: 300;
-      ">Four rockets. More payload to orbit at lower cost per kilogram than any vehicles in history. Every first stage recovered and reflown.</p>
+  <!-- Background image: falcon9-plume.jpg -->
+  <section class="section-hero" id="missions">
+    <div class="section-hero-bg" style="background-image: url('images/falcon9-plume.jpg');"></div>
+    <div class="section-hero-overlay"></div>
+    <div class="section-hero-content">
+      <span class="section-eyebrow">Launch Vehicles</span>
+      <h2>The Fleet That Rewrote<br>the Rules of Space</h2>
+      <p class="section-hero-sub">Four rockets. More payload to orbit at lower cost per kilogram than any vehicles in history. Every first stage recovered and reflown.</p>
     </div>
   </section>
 
   <!-- Rocket Cards Section -->
-  <section class="section dark" style="padding-top: 0;">
+  <section class="section-content dark">
     <div class="section-inner">
 
       <!-- Starship Hero -->
@@ -478,78 +423,14 @@
   </section>
 
   <!-- Technology -->
-  <section id="technology" style="
-    position: relative;
-    width: 100%;
-    min-height: 70vh;
-    display: flex;
-    align-items: flex-end;
-    padding: 0;
-    overflow: hidden;
-    margin-bottom: 0;
-  ">
-    <!-- Full bleed background -->
-    <div style="
-      position: absolute;
-      inset: 0;
-      background-image: url('images/grok.jpg');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      z-index: 0;
-    "></div>
-    
-    <!-- Dark gradient overlay -->
-    <div style="
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        to bottom,
-        rgba(0,0,0,0.1) 0%,
-        rgba(0,0,0,0.4) 40%,
-        rgba(0,0,0,0.90) 100%
-      );
-      z-index: 1;
-    "></div>
-    
-    <!-- Text content -->
-    <div style="
-      position: relative;
-      z-index: 2;
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 80px 48px;
-    ">
-      <p style="
-        font-size: 11px;
-        font-weight: 600;
-        letter-spacing: 0.15em;
-        text-transform: uppercase;
-        color: rgba(255,255,255,0.6);
-        margin-bottom: 20px;
-      ">SpaceXAI Division</p>
-      
-      <h2 style="
-        font-size: clamp(42px, 6vw, 80px);
-        font-weight: 300;
-        line-height: 1.05;
-        color: #ffffff;
-        max-width: 700px;
-        margin-bottom: 24px;
-        letter-spacing: -0.02em;
-      ">The AI Empire Inside<br>the Space Empire</h2>
-      
-      <p style="
-        font-size: 18px;
-        color: rgba(255,255,255,0.75);
-        max-width: 580px;
-        line-height: 1.6;
-        margin-bottom: 40px;
-        font-weight: 300;
-      ">In February 2026, SpaceX acquired xAI in an all-stock transaction valuing the combined entity at $1.25 trillion — the largest merger in corporate history. Grok, X, Colossus, and Cursor now operate under a single roof.</p>
-      
-      <!-- Source badge -->
+  <!-- Background image: rockettrail.jpg -->
+  <section class="section-hero" id="technology">
+    <div class="section-hero-bg" style="background-image: url('images/rockettrail.jpg');"></div>
+    <div class="section-hero-overlay"></div>
+    <div class="section-hero-content">
+      <span class="section-eyebrow">SpaceXAI Division</span>
+      <h2>The AI Empire Inside<br>the Space Empire</h2>
+      <p class="section-hero-sub">In February 2026, SpaceX acquired xAI in an all-stock transaction valuing the combined entity at $1.25 trillion — the largest merger in corporate history.</p>
       <a href="https://www.sec.gov/Archives/edgar/data/1181412/000162828026036936/spaceexplorationtechnologi.htm"
          target="_blank"
          style="
@@ -566,7 +447,7 @@
   </section>
 
   <!-- AI Cards Section -->
-  <section class="section" style="padding-top: 0;">
+  <section class="section-content">
     <div class="section-inner">
 
       <div class="ai-grid">
@@ -644,11 +525,19 @@
   </section>
 
   <!-- Launch Schedule -->
-  <section class="section dark" id="launches">
-    <div class="section-inner">
-      <div class="section-label">Mission Control</div>
+  <!-- Background image: falcon9.jpg -->
+  <section class="section-hero dark" id="launches">
+    <div class="section-hero-bg" style="background-image: url('images/falcon9.jpg');"></div>
+    <div class="section-hero-overlay"></div>
+    <div class="section-hero-content">
+      <span class="section-eyebrow">Mission Control</span>
       <h2>Upcoming Launch Schedule</h2>
-      <p class="section-sub">Live countdowns to next launches from Starbase TX, Cape Canaveral FL, and Vandenberg SFB CA. All times UTC.</p>
+      <p class="section-hero-sub">Live countdowns to next launches from Starbase TX, Cape Canaveral FL, and Vandenberg SFB CA. All times UTC.</p>
+    </div>
+  </section>
+
+  <!-- Launch Cards Section -->
+  <section class="section-content dark">
       <div class="launch-grid">
 
         <div class="launch-card">
@@ -732,11 +621,19 @@
   </div>
 
   <!-- Compute Architecture -->
-  <section class="section" id="compute">
-    <div class="section-inner">
-      <div class="section-label">Deep-Space Compute Program</div>
-      <h2>Research Papers</h2>
-      <p class="section-sub">Eight papers. One integrated program. A formally verified deep-space compute architecture covering semiconductor reliability, constitutional AI governance, self-replicating fabrication, and civilization-scale deployment. Authors: Claude × Grok × Jacob Thompson. April–May 2026.</p>
+  <!-- Background image: dragon-milkyway.jpg -->
+  <section class="section-hero" id="compute">
+    <div class="section-hero-bg" style="background-image: url('images/dragon-milkyway.jpg');"></div>
+    <div class="section-hero-overlay"></div>
+    <div class="section-hero-content">
+      <span class="section-eyebrow">Deep-Space Compute Architecture Program</span>
+      <h2>Eight Papers. One Integrated Program.</h2>
+      <p class="section-hero-sub">Formally verified solutions covering semiconductor reliability, constitutional AI governance, self-replicating fabrication, and civilization-scale deployment. Authors: Claude × Grok × Jacob Thompson. April–May 2026.</p>
+    </div>
+  </section>
+
+  <!-- Research Papers Content -->
+  <section class="section-content">
 
       <a href="https://www.elonsmomspussy.com" target="_blank" class="btn btn-ghost btn-lg" style="display: inline-block; margin-bottom: 2rem;">Read the Full Program &rarr;</a>
 
@@ -794,11 +691,19 @@
   </section>
 
   <!-- Mission Timeline -->
-  <section class="section dark" id="timeline">
-    <div class="section-inner">
-      <div class="section-label">Program Roadmap</div>
+  <!-- Background image: rockettrail.jpg -->
+  <section class="section-hero dark" id="timeline">
+    <div class="section-hero-bg" style="background-image: url('images/rockettrail.jpg');"></div>
+    <div class="section-hero-overlay"></div>
+    <div class="section-hero-content">
+      <span class="section-eyebrow">Program Roadmap</span>
       <h2>Mission Timeline</h2>
-      <p class="section-sub">From ground-based reliability validation to century-scale autonomous deep-space operation and civilization-seed deployment.</p>
+      <p class="section-hero-sub">From ground-based reliability validation to century-scale autonomous deep-space operation and civilization-seed deployment.</p>
+    </div>
+  </section>
+
+  <!-- Timeline Content -->
+  <section class="section-content dark">
       <div class="timeline">
         <div class="tl-item">
           <div class="tl-left"><span class="tl-date">2024&ndash;2026</span><div class="tl-dot dot-active"></div></div>
@@ -861,11 +766,19 @@
   </section>
 
   <!-- Leadership -->
-  <section class="section dark" id="leadership">
-    <div class="section-inner">
-      <div class="section-label">Leadership</div>
-      <h2>Executive Team</h2>
-      <p class="section-sub">The team that built the program — honestly.</p>
+  <!-- Background image: falcon9-sunrise.jpg -->
+  <section class="section-hero dark" id="leadership">
+    <div class="section-hero-bg" style="background-image: url('images/falcon9-sunrise.jpg');"></div>
+    <div class="section-hero-overlay"></div>
+    <div class="section-hero-content">
+      <span class="section-eyebrow">Leadership</span>
+      <h2>The Team That Built the Program</h2>
+      <p class="section-hero-sub">Honestly.</p>
+    </div>
+  </section>
+
+  <!-- Leadership Content -->
+  <section class="section-content dark">
       <div class="team-grid">
         <div class="team-card">
           <div class="team-avatar">JT</div>
@@ -904,11 +817,19 @@
   </div>
 
   <!-- Press -->
-  <section class="section" id="press">
-    <div class="section-inner">
-      <div class="section-label">Newsroom</div>
+  <!-- Background image: falcon9-plume.jpg -->
+  <section class="section-hero" id="press">
+    <div class="section-hero-bg" style="background-image: url('images/falcon9-plume.jpg');"></div>
+    <div class="section-hero-overlay"></div>
+    <div class="section-hero-content">
+      <span class="section-eyebrow">Newsroom</span>
       <h2>Breaking Developments</h2>
-      <p class="section-sub" style="margin-bottom: 1.5rem;"><a href="newsroom/resources.html" style="color: var(--accent-light);">View Essential Reading Resources &rarr;</a></p>
+      <p class="section-hero-sub">Analysis and reporting on SpaceX, SpaceXAI, and the full Elon Musk empire.</p>
+    </div>
+  </section>
+
+  <!-- Newsroom Content -->
+  <section class="section-content">
       <div class="newsroom-grid">
 
         <a href="newsroom/colossus.html" class="news-card">

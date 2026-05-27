@@ -2519,6 +2519,171 @@ small {
   line-height: 1.4;
 }
 
+/* ===== Section Hero Base Styles ===== */
+.section-hero {
+  position: relative;
+  width: 100%;
+  min-height: 85vh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.section-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: 0;
+  transition: transform 0.1s ease;
+}
+
+.section-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.05) 0%,
+    rgba(0,0,0,0.25) 35%,
+    rgba(0,0,0,0.88) 100%
+  );
+  z-index: 1;
+}
+
+.section-hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 48px;
+}
+
+.section-eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 20px;
+  display: block;
+}
+
+.section-hero h2 {
+  font-size: clamp(38px, 5.5vw, 76px);
+  font-weight: 300;
+  line-height: 1.05;
+  color: #ffffff;
+  max-width: 720px;
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
+}
+
+.section-hero-sub {
+  font-size: 17px;
+  color: rgba(255,255,255,0.72);
+  max-width: 560px;
+  line-height: 1.65;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+
+.section-content {
+  background: #0a0d18;
+  padding: 80px 48px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-content .card,
+.section-content [class*="card"] {
+  padding: 32px !important;
+  margin-bottom: 24px !important;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .section-hero {
+    min-height: 70vh;
+  }
+  .section-hero-bg {
+    background-attachment: scroll;
+  }
+  .section-hero-content {
+    padding: 48px 24px;
+  }
+  .section-hero h2 {
+    font-size: clamp(32px, 8vw, 48px);
+  }
+  .section-content {
+    padding: 48px 24px;
+  }
+}
+
+/* ===== Card Spacing and Padding ===== */
+.rocket-grid {
+  gap: 32px;
+}
+.rocket-card {
+  padding: 40px;
+}
+.rocket-card-img {
+  min-height: 280px;
+}
+
+.ai-grid {
+  gap: 32px;
+}
+.ai-card {
+  padding: 40px;
+}
+
+.launch-grid {
+  gap: 32px;
+}
+.launch-card {
+  padding: 40px;
+}
+
+.arch-grid {
+  gap: 32px;
+}
+.arch-card {
+  padding: 36px;
+  border-left: 2px solid var(--accent);
+}
+
+.newsroom-grid {
+  gap: 24px;
+}
+.news-card-img {
+  min-height: 220px;
+}
+
+.team-grid {
+  gap: 32px;
+}
+.team-card {
+  padding: 40px;
+}
+
+/* ===== Countdown Font Size ===== */
+.cd-days, .cd-hours, .cd-min, .cd-sec {
+  font-size: clamp(32px, 4vw, 48px);
+}
+
+/* ===== Timeline Phase Year Labels ===== */
+.tl-date {
+  font-size: 48px;
+}
+
 /* ===== Top Disclosure Banner ===== */
 .top-disclosure-banner {
   background: #010408;
