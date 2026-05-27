@@ -2910,6 +2910,19 @@ body {
     max-height: 200px !important;
   }
 
+  /* Hero video specific - show fallback on mobile */
+  .hero-video-wrap {
+    display: none !important;
+  }
+  
+  .hero-video-fallback {
+    display: block !important;
+    background-image: url('images/starship.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 60vh;
+  }
+
   /* ================================
      SPACEXAI 2x2 GRID → 1 COLUMN
   ================================ */
