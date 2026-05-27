@@ -1837,11 +1837,10 @@ small {
 .vehicle-iframe {
   position: absolute;
   top: 50%;
-  left: 30%;
+  left: 50%;
   width: 100%;
   height: 100%;
-  transform: translate(0, -50%) scale(1.4);
-  transform-origin: center center;
+  transform: translate(-50%, -50%) scale(1.4);
   pointer-events: none;
   border: none;
   z-index: 1;
