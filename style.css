@@ -2725,16 +2725,385 @@ body {
 
 /* ===== Mobile cascade overrides (must follow 900px block) ===== */
 @media (max-width: 768px) {
-  .cta-buttons { align-items: stretch; }
-  .rocket-hero-img { min-height: 200px; }
-  .ai-card-featured .ai-card-img { min-height: 180px; height: 180px; }
+
+  /* ================================
+     NAVIGATION
+  ================================ */
   
-  /* Hero sections mobile overrides */
-  #missions, #technology {
+  /* Hide full nav links on mobile */
+  nav ul, .nav-links {
+    display: none !important;
+  }
+  
+  /* Add hamburger menu button */
+  .nav-hamburger {
+    display: flex !important;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 8px;
+  }
+  
+  .nav-hamburger span {
+    width: 24px;
+    height: 2px;
+    background: white;
+    display: block;
+  }
+
+  /* Navbar padding tighter on mobile */
+  nav, header nav {
+    padding: 12px 20px !important;
+  }
+
+  /* ================================
+     HERO SECTION
+  ================================ */
+
+  /* Fix parallax — broken on iOS Safari */
+  .section-hero-bg,
+  [style*="background-attachment: fixed"] {
     background-attachment: scroll !important;
+    background-position: center center !important;
+  }
+
+  /* Hero height — shorter on mobile */
+  .section-hero {
     min-height: 60vh !important;
   }
-  #missions > div[style*="z-index: 2"], #technology > div[style*="z-index: 2"] {
-    padding: 60px 24px !important;
+
+  /* Hero text padding */
+  .section-hero-content {
+    padding: 40px 20px !important;
   }
+
+  /* Hero headlines — smaller on mobile */
+  .section-hero h2,
+  .section-hero h1 {
+    font-size: clamp(28px, 8vw, 42px) !important;
+    line-height: 1.1 !important;
+    max-width: 100% !important;
+  }
+
+  /* Hero subtext */
+  .section-hero-sub,
+  .section-hero p {
+    font-size: 15px !important;
+    max-width: 100% !important;
+  }
+
+  /* Eyebrow labels */
+  .section-eyebrow {
+    font-size: 10px !important;
+    margin-bottom: 12px !important;
+  }
+
+  /* ================================
+     MAIN HERO / LANDING
+  ================================ */
+
+  /* Main headline */
+  h1 {
+    font-size: clamp(32px, 9vw, 48px) !important;
+    line-height: 1.1 !important;
+  }
+
+  /* Hero subtext paragraph */
+  .hero-sub, .hero p {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Source badge pills — wrap on mobile */
+  .badge-row, .source-badges {
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+  }
+
+  /* CTA buttons — stack vertically */
+  .hero-ctas, .cta-row {
+    flex-direction: column !important;
+    gap: 12px !important;
+    align-items: flex-start !important;
+  }
+
+  /* ================================
+     TICKER / TOP BAR
+  ================================ */
+
+  .ticker, .top-bar {
+    font-size: 10px !important;
+    padding: 6px 16px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  /* ================================
+     FAMILY OF COMPANIES ICONS
+  ================================ */
+
+  .companies-row, .icon-row {
+    gap: 16px !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+  }
+
+  .companies-row a, .icon-row a {
+    font-size: 11px !important;
+  }
+
+  /* ================================
+     STAT COUNTERS
+  ================================ */
+
+  .stats-row, .counters-row {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 16px !important;
+  }
+
+  .stat-number, .counter {
+    font-size: clamp(28px, 7vw, 40px) !important;
+  }
+
+  .stat-label {
+    font-size: 11px !important;
+  }
+
+  /* ================================
+     ABOUT SECTION CARDS
+  ================================ */
+
+  .about-cards,
+  .vision-mission-research {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+    padding: 24px 20px !important;
+  }
+
+  /* ================================
+     FLEET / ROCKET CARDS
+  ================================ */
+
+  /* Rocket cards — single column */
+  .fleet-grid,
+  .missions-grid,
+  .rocket-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    padding: 24px 16px !important;
+  }
+
+  /* Rocket card images — shorter on mobile */
+  .rocket-card img,
+  .mission-card img,
+  [class*="card"] img {
+    max-height: 200px !important;
+    object-fit: cover !important;
+    width: 100% !important;
+  }
+
+  /* YouTube embeds — full width, 16:9 */
+  iframe[src*="youtube"] {
+    width: 100% !important;
+    height: 200px !important;
+    max-height: 200px !important;
+  }
+
+  /* ================================
+     SPACEXAI 2x2 GRID → 1 COLUMN
+  ================================ */
+
+  .spacexai-grid,
+  .ai-grid,
+  .technology-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+    padding: 24px 16px !important;
+  }
+
+  /* ================================
+     MISSION CONTROL COUNTDOWNS
+  ================================ */
+
+  .launches-grid,
+  .countdown-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+    padding: 24px 16px !important;
+  }
+
+  /* Countdown numbers — readable on mobile */
+  .countdown-number,
+  .days, .hrs, .min, .sec {
+    font-size: clamp(28px, 8vw, 40px) !important;
+  }
+
+  .countdown-label {
+    font-size: 10px !important;
+  }
+
+  /* ================================
+     RESEARCH PAPERS 2x4 → 1 COLUMN
+  ================================ */
+
+  .papers-grid,
+  .research-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+    padding: 24px 16px !important;
+  }
+
+  /* Paper cards — tighter on mobile */
+  .paper-card {
+    padding: 24px !important;
+  }
+
+  /* ================================
+     MISSION TIMELINE
+  ================================ */
+
+  .timeline-grid,
+  .timeline-phases {
+    padding: 24px 16px !important;
+    gap: 32px !important;
+  }
+
+  .timeline-year {
+    font-size: 32px !important;
+  }
+
+  /* Tags wrap properly */
+  .phase-tags,
+  .timeline-tags {
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+  }
+
+  .phase-tag, .tag {
+    font-size: 10px !important;
+    padding: 3px 8px !important;
+  }
+
+  /* ================================
+     LEADERSHIP CARDS → 1 COLUMN
+  ================================ */
+
+  .leadership-grid,
+  .team-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+    padding: 24px 16px !important;
+  }
+
+  /* ================================
+     NEWSROOM CARDS
+  ================================ */
+
+  .newsroom-grid,
+  .news-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+    padding: 24px 16px !important;
+  }
+
+  .news-card-img img {
+    height: 180px !important;
+    object-fit: cover !important;
+    width: 100% !important;
+  }
+
+  /* ================================
+     CONTACT FORM
+  ================================ */
+
+  .contact-grid,
+  .contact-form {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+    padding: 24px 16px !important;
+  }
+
+  /* Form inputs full width */
+  input, select, textarea {
+    width: 100% !important;
+    font-size: 16px !important;
+    /* 16px prevents iOS zoom on focus */
+  }
+
+  /* ================================
+     FOOTER
+  ================================ */
+
+  .footer-grid,
+  footer .grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+    padding: 40px 20px !important;
+  }
+
+  footer {
+    text-align: center !important;
+  }
+
+  /* ================================
+     GLOBAL SPACING
+  ================================ */
+
+  /* All sections get tighter padding */
+  section {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* Content containers */
+  .container,
+  .section-content,
+  .max-w-1200 {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    max-width: 100% !important;
+  }
+
+  /* Remove horizontal overflow */
+  body {
+    overflow-x: hidden !important;
+  }
+
+  /* ================================
+     TYPOGRAPHY GLOBAL
+  ================================ */
+
+  h2 {
+    font-size: clamp(26px, 7vw, 38px) !important;
+    line-height: 1.15 !important;
+  }
+
+  h3 {
+    font-size: clamp(18px, 5vw, 24px) !important;
+  }
+
+  p {
+    font-size: 14px !important;
+    line-height: 1.65 !important;
+  }
+
+  /* ================================
+     HORIZONTAL SCROLL FIX
+  ================================ */
+
+  /* Anything wider than viewport 
+     gets constrained */
+  * {
+    max-width: 100vw !important;
+    word-break: break-word !important;
+  }
+
+  /* But don't break images */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
 }
+/* END @media (max-width: 768px) */
