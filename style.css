@@ -2925,17 +2925,49 @@ body {
     max-height: 200px !important;
   }
 
-  /* Hero video specific - show HTML5 video on mobile */
-  .hero-video-wrap {
+  /* MOBILE HERO — static image replaces video on all mobile */
+
+  /* Hide all video elements on mobile */
+  .hero-video-container,
+  .hero-video-mobile,
+  video,
+  .hero iframe,
+  .hero-section iframe {
     display: none !important;
   }
-  
-  .hero-video-mobile {
+
+  /* Show static background image on hero section instead */
+  .hero,
+  .hero-section,
+  #hero {
+    background-image: 
+      linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.2) 0%,
+        rgba(0,0,0,0.65) 100%
+      ),
+      url('images/falconheavyliftoff.jpg');
+    background-size: cover;
+    background-position: center 30%;
+    background-attachment: scroll;
+    min-height: 100vh;
+  }
+
+  /* Hide all YouTube iframes in rocket cards on mobile */
+  .rocket-card iframe,
+  .mission-card iframe,
+  [class*="card"] iframe {
+    display: none !important;
+  }
+
+  /* Show rocket images in their place — they already exist */
+  .rocket-card img,
+  .mission-card img {
     display: block !important;
-  }
-  
-  .hero-video-fallback {
-    display: none !important;
+    width: 100% !important;
+    height: 220px !important;
+    object-fit: cover !important;
+    border-radius: 8px !important;
   }
 
   /* ================================
