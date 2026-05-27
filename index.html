@@ -246,11 +246,82 @@
   </section>
 
   <!-- Missions -->
-  <section class="section dark" id="missions">
+  <section id="missions" style="
+    position: relative;
+    width: 100%;
+    min-height: 70vh;
+    display: flex;
+    align-items: flex-end;
+    padding: 0;
+    overflow: hidden;
+    margin-bottom: 0;
+  ">
+    <!-- Full bleed background image -->
+    <div style="
+      position: absolute;
+      inset: 0;
+      background-image: url('images/starship.jpg');
+      background-size: cover;
+      background-position: center 30%;
+      background-attachment: fixed;
+      z-index: 0;
+    "></div>
+    
+    <!-- Dark gradient overlay -->
+    <div style="
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.1) 0%,
+        rgba(0,0,0,0.3) 40%,
+        rgba(0,0,0,0.85) 100%
+      );
+      z-index: 1;
+    "></div>
+    
+    <!-- Text content -->
+    <div style="
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 48px;
+    ">
+      <p style="
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.6);
+        margin-bottom: 20px;
+      ">Launch Vehicles</p>
+      
+      <h2 style="
+        font-size: clamp(42px, 6vw, 80px);
+        font-weight: 300;
+        line-height: 1.05;
+        color: #ffffff;
+        max-width: 700px;
+        margin-bottom: 24px;
+        letter-spacing: -0.02em;
+      ">The Fleet That Rewrote<br>the Rules of Space</h2>
+      
+      <p style="
+        font-size: 18px;
+        color: rgba(255,255,255,0.75);
+        max-width: 520px;
+        line-height: 1.6;
+        margin-bottom: 40px;
+        font-weight: 300;
+      ">Four rockets. More payload to orbit at lower cost per kilogram than any vehicles in history. Every first stage recovered and reflown.</p>
+    </div>
+  </section>
+
+  <!-- Rocket Cards Section -->
+  <section class="section dark" style="padding-top: 0;">
     <div class="section-inner">
-      <div class="section-label">Launch Vehicles</div>
-      <h2>The Fleet That Rewrote<br />the Rules of Space</h2>
-      <p class="section-sub">Four rockets. More payload to orbit at lower cost per kilogram than any vehicles in history. Every first stage recovered and reflown.</p>
 
       <!-- Starship Hero -->
       <div class="rocket-hero">
@@ -407,11 +478,96 @@
   </section>
 
   <!-- Technology -->
-  <section class="section" id="technology">
+  <section id="technology" style="
+    position: relative;
+    width: 100%;
+    min-height: 70vh;
+    display: flex;
+    align-items: flex-end;
+    padding: 0;
+    overflow: hidden;
+    margin-bottom: 0;
+  ">
+    <!-- Full bleed background -->
+    <div style="
+      position: absolute;
+      inset: 0;
+      background-image: url('images/grok.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      z-index: 0;
+    "></div>
+    
+    <!-- Dark gradient overlay -->
+    <div style="
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.1) 0%,
+        rgba(0,0,0,0.4) 40%,
+        rgba(0,0,0,0.90) 100%
+      );
+      z-index: 1;
+    "></div>
+    
+    <!-- Text content -->
+    <div style="
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 48px;
+    ">
+      <p style="
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.6);
+        margin-bottom: 20px;
+      ">SpaceXAI Division</p>
+      
+      <h2 style="
+        font-size: clamp(42px, 6vw, 80px);
+        font-weight: 300;
+        line-height: 1.05;
+        color: #ffffff;
+        max-width: 700px;
+        margin-bottom: 24px;
+        letter-spacing: -0.02em;
+      ">The AI Empire Inside<br>the Space Empire</h2>
+      
+      <p style="
+        font-size: 18px;
+        color: rgba(255,255,255,0.75);
+        max-width: 580px;
+        line-height: 1.6;
+        margin-bottom: 40px;
+        font-weight: 300;
+      ">In February 2026, SpaceX acquired xAI in an all-stock transaction valuing the combined entity at $1.25 trillion — the largest merger in corporate history. Grok, X, Colossus, and Cursor now operate under a single roof.</p>
+      
+      <!-- Source badge -->
+      <a href="https://www.sec.gov/Archives/edgar/data/1181412/000162828026036936/spaceexplorationtechnologi.htm"
+         target="_blank"
+         style="
+           display: inline-block;
+           font-size: 11px;
+           padding: 6px 14px;
+           border: 1px solid rgba(255,255,255,0.3);
+           border-radius: 20px;
+           color: rgba(255,255,255,0.6);
+           text-decoration: none;
+           letter-spacing: 0.05em;
+      ">Source: SEC S-1 Filing, May 20 2026 →</a>
+    </div>
+  </section>
+
+  <!-- AI Cards Section -->
+  <section class="section" style="padding-top: 0;">
     <div class="section-inner">
-      <div class="section-label">SpaceXAI Division</div>
-      <h2>The AI Empire Inside<br />the Space Empire</h2>
-      <p class="section-sub">In February 2026, SpaceX acquired xAI in an all-stock transaction valuing the combined entity at $1.25 trillion &mdash; the largest merger in corporate history. Grok, X, Colossus, and Cursor now operate under a single roof.</p>
 
       <div class="ai-grid">
 

@@ -2562,4 +2562,13 @@ small {
   .cta-buttons { align-items: stretch; }
   .rocket-hero-img { min-height: 200px; }
   .ai-card-featured .ai-card-img { min-height: 180px; height: 180px; }
+  
+  /* Hero sections mobile overrides */
+  #missions, #technology {
+    background-attachment: scroll !important;
+    min-height: 60vh !important;
+  }
+  #missions > div[style*="z-index: 2"], #technology > div[style*="z-index: 2"] {
+    padding: 60px 24px !important;
+  }
 }
