@@ -20,38 +20,40 @@
 })();
 
 // ===== Stats Counters =====
-function animateCounter(el) {
-  const target   = parseFloat(el.dataset.target);
-  const suffix   = el.dataset.suffix || '';
-  const decimal  = el.dataset.target.includes('.');
-  const duration = 2500;
-  const start    = performance.now();
+document.addEventListener('DOMContentLoaded', function() {
+  function animateCounter(el) {
+    const target   = parseFloat(el.dataset.target);
+    const suffix   = el.dataset.suffix || '';
+    const decimal  = el.dataset.target.includes('.');
+    const duration = 2500;
+    const start    = performance.now();
 
-  function easeOutQuad(t) { return t * (2 - t); }
+    function easeOutQuad(t) { return t * (2 - t); }
 
-  function update(now) {
-    const elapsed  = now - start;
-    const progress = Math.min(elapsed / duration, 1);
-    const eased    = easeOutQuad(progress);
-    const value    = decimal
-      ? (eased * target).toFixed(1)
-      : Math.floor(eased * target);
-    el.textContent = value + suffix;
-    if (progress < 1) requestAnimationFrame(update);
+    function update(now) {
+      const elapsed  = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased    = easeOutQuad(progress);
+      const value    = decimal
+        ? (eased * target).toFixed(1)
+        : Math.floor(eased * target);
+      el.textContent = value + suffix;
+      if (progress < 1) requestAnimationFrame(update);
+    }
+
+    requestAnimationFrame(update);
   }
 
-  requestAnimationFrame(update);
-}
+  const counterObserver = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      animateCounter(entry.target);
+      obs.unobserve(entry.target);
+    });
+  }, { threshold: 0.4 });
 
-const counterObserver = new IntersectionObserver((entries, obs) => {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) return;
-    animateCounter(entry.target);
-    obs.unobserve(entry.target);
-  });
-}, { threshold: 0.4 });
-
-document.querySelectorAll('.stat-num').forEach(el => counterObserver.observe(el));
+  document.querySelectorAll('.stat-num[data-target]').forEach(el => counterObserver.observe(el));
+});
 
 // ===== Fade-in on scroll =====
 const fadeStyle = document.createElement('style');
@@ -125,32 +127,34 @@ document.querySelectorAll('.card, .mission-card, .tech-item, .team-card, .press-
 })();
 
 // ===== Launch Countdown Timers =====
-function updateCountdowns() {
-  document.querySelectorAll('.countdown[data-target]').forEach(el => {
-    const target = new Date(el.dataset.target).getTime();
-    const now = Date.now();
-    const diff = target - now;
-    if (diff <= 0) {
-      el.innerHTML = '<span class="cd-launched">&#x2713; LAUNCHED</span>';
-      return;
-    }
-    const days  = Math.floor(diff / 864e5);
-    const hours = Math.floor((diff % 864e5) / 36e5);
-    const mins  = Math.floor((diff % 36e5) / 6e4);
-    const secs  = Math.floor((diff % 6e4) / 1e3);
-    const fmt = n => String(n).padStart(2, '0');
-    const dEl = el.querySelector('.cd-days');
-    const hEl = el.querySelector('.cd-hours');
-    const mEl = el.querySelector('.cd-min');
-    const sEl = el.querySelector('.cd-sec');
-    if (dEl) dEl.textContent = fmt(days);
-    if (hEl) hEl.textContent = fmt(hours);
-    if (mEl) mEl.textContent = fmt(mins);
-    if (sEl) sEl.textContent = fmt(secs);
-  });
-}
-setInterval(updateCountdowns, 1000);
-updateCountdowns();
+document.addEventListener('DOMContentLoaded', function() {
+  function updateCountdowns() {
+    document.querySelectorAll('.countdown[data-target]').forEach(el => {
+      const target = new Date(el.dataset.target).getTime();
+      const now = Date.now();
+      const diff = target - now;
+      if (diff <= 0) {
+        el.innerHTML = '<span class="cd-launched">&#x2713; LAUNCHED</span>';
+        return;
+      }
+      const days  = Math.floor(diff / 864e5);
+      const hours = Math.floor((diff % 864e5) / 36e5);
+      const mins  = Math.floor((diff % 36e5) / 6e4);
+      const secs  = Math.floor((diff % 6e4) / 1e3);
+      const fmt = n => String(n).padStart(2, '0');
+      const dEl = el.querySelector('.cd-days');
+      const hEl = el.querySelector('.cd-hours');
+      const mEl = el.querySelector('.cd-min');
+      const sEl = el.querySelector('.cd-sec');
+      if (dEl) dEl.textContent = fmt(days);
+      if (hEl) hEl.textContent = fmt(hours);
+      if (mEl) mEl.textContent = fmt(mins);
+      if (sEl) sEl.textContent = fmt(secs);
+    });
+  }
+  updateCountdowns();
+  setInterval(updateCountdowns, 1000);
+});
 
 // ===== Vehicle clip segment loops (IFrame API) =====
 (function () {
