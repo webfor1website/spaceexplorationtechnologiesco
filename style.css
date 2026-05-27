@@ -2519,6 +2519,17 @@ small {
   line-height: 1.4;
 }
 
+/* ===== Top Disclosure Banner ===== */
+.top-disclosure-banner {
+  background: #010408;
+  border-bottom: 1px solid var(--border);
+  padding: 0.5rem 2rem;
+  font-size: 0.6875rem;
+  color: var(--text-dim);
+  text-align: center;
+  line-height: 1.4;
+}
+
 /* ===== Responsive — new sections ===== */
 @media (max-width: 900px) {
   .newsroom-grid { grid-template-columns: 1fr; }
