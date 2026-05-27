@@ -129,15 +129,10 @@ document.querySelectorAll('.card, .mission-card, .tech-item, .team-card, .press-
 // ===== Launch Countdown Timers =====
 document.addEventListener('DOMContentLoaded', function() {
   function updateCountdowns() {
-    const countdowns = document.querySelectorAll('.countdown[data-target]');
-    console.log('Found countdowns:', countdowns.length);
-    countdowns.forEach(el => {
-      const targetStr = el.dataset.target;
-      console.log('Target string:', targetStr);
-      const target = new Date(targetStr).getTime();
+    document.querySelectorAll('.countdown[data-target]').forEach(el => {
+      const target = new Date(el.dataset.target).getTime();
       const now = Date.now();
       const diff = target - now;
-      console.log('Target time:', target, 'Now:', now, 'Diff:', diff);
       if (diff <= 0) {
         el.innerHTML = '<span class="cd-launched">&#x2713; LAUNCHED</span>';
         return;
@@ -151,7 +146,6 @@ document.addEventListener('DOMContentLoaded', function() {
       const hEl = el.querySelector('.cd-hours');
       const mEl = el.querySelector('.cd-min');
       const sEl = el.querySelector('.cd-sec');
-      console.log('Elements:', dEl, hEl, mEl, sEl);
       if (dEl) dEl.textContent = fmt(days);
       if (hEl) hEl.textContent = fmt(hours);
       if (mEl) mEl.textContent = fmt(mins);
