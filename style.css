@@ -2385,6 +2385,24 @@ small {
   border: 1px solid var(--border-accent);
   backdrop-filter: blur(8px);
 }
+.news-cat-featured {
+  background: linear-gradient(135deg, rgba(29,111,232,0.4) 0%, rgba(29,111,232,0.2) 100%);
+  color: #fff;
+  border-color: rgba(29,111,232,0.6);
+  box-shadow: 0 0 12px rgba(29,111,232,0.3);
+}
+.news-card-featured {
+  grid-column: span 2;
+  border: 2px solid rgba(29,111,232,0.4);
+  box-shadow: 0 0 20px rgba(29,111,232,0.15);
+}
+.news-card-featured .news-card-body h3 {
+  font-size: 1.15rem;
+}
+.news-card-featured .news-card-body p {
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+}
 .news-card-body {
   padding: 1.4rem;
   display: flex;
